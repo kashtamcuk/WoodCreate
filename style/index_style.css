@@ -1,0 +1,2414 @@
+/* =========================================
+   СКИДАННЯ СТИЛІВ
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f2ed;
+    color: #2c211a;
+}
+
+
+/* =========================================
+   ВЕРХНЯ ПАНЕЛЬ
+   ========================================= */
+
+.top-header {
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+    height: 74px;
+
+    background: #211f1e;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+.header-container {
+    width: 100%;
+    max-width: 1600px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   КНОПКА ТРЬОХ СМУЖОК
+   ========================================= */
+
+.menu-button {
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #393735;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.menu-button span {
+    width: 24px;
+    height: 3px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+.menu-button:hover {
+    background: #4b4846;
+}
+
+.menu-button:hover span {
+    background: #d59a5b;
+}
+
+
+/* =========================================
+   ЛОГОТИП
+   ========================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: max-content;
+    min-width: 220px;
+    height: 100%;
+
+    text-decoration: none;
+
+    transition: opacity 0.25s ease;
+}
+
+
+/* =========================================
+   ЗОБРАЖЕННЯ ЛОГОТИПА
+   ========================================= */
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* Ефект при наведенні */
+
+.logo:hover .logo-image {
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   БЛОК З ТЕКСТОМ
+   ========================================= */
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+
+/* Назва сайту */
+
+.logo-name {
+    color: #ffffff;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: 0.6px;
+
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
+}
+
+
+/* Підпис під назвою */
+
+.logo-subtitle {
+    margin-top: 5px;
+
+    color: #aaa5a1;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
+}
+
+
+/* =========================================
+   ЕФЕКТ НА ЛОГОТИП ПРИ НАВЕДЕННІ
+   ========================================= */
+
+.logo:hover .logo-name {
+    color: #e3a365;
+}
+
+.logo:hover .logo-subtitle {
+    color: #d0cbc7;
+}
+
+
+/* =========================================
+   ТЕЛЕФОН / ПЛАНШЕТ
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .logo {
+        min-width: 180px;
+    }
+
+    .logo-image {
+        width: 46px;
+        height: 46px;
+    }
+
+    .logo-name {
+        font-size: 21px;
+    }
+
+    .logo-subtitle {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================
+   МАЛЕНЬКИЙ ЕКРАН
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    .logo {
+        min-width: auto;
+
+        gap: 8px;
+    }
+
+    .logo-image {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo-name {
+        font-size: 19px;
+    }
+
+    .logo-subtitle {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   ДУЖЕ МАЛЕНЬКИЙ ЕКРАН
+   ========================================= */
+
+@media (max-width: 550px) {
+
+    .logo {
+        min-width: 42px;
+    }
+
+    .logo-image {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo-text {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   КНОПКА КАТАЛОГУ
+   ========================================= */
+
+.catalog-button {
+    height: 46px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1px solid #aaa5a1;
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.catalog-button:hover {
+    border-color: #d49a5b;
+
+    background: #302d2b;
+
+    color: #e3ad76;
+}
+
+.catalog-icon {
+    font-size: 23px;
+}
+
+
+/* =========================================
+   ПОШУК
+   ========================================= */
+
+.search {
+    flex: 1;
+
+    height: 46px;
+
+    max-width: 800px;
+
+    display: flex;
+
+    background: #ffffff;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+}
+
+.search input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    padding: 0 18px;
+
+    font-size: 16px;
+
+    color: #2c211a;
+}
+
+.search input::placeholder {
+    color: #929292;
+}
+
+.search-button {
+    width: 70px;
+
+    border: none;
+
+    background: #2d9f57;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.search-button:hover {
+    background: #248b4a;
+}
+
+
+/* =========================================
+   АКАУНТ
+   ========================================= */
+
+.account {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    min-width: 100px;
+}
+
+.account-icon {
+    font-size: 25px;
+}
+
+.account-text {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+}
+
+.account-text small {
+    color: #a9a5a2;
+
+    font-size: 11px;
+}
+
+.account:hover {
+    color: #e3aa70;
+}
+
+
+/* =========================================
+   КОШИК
+   ========================================= */
+
+.cart {
+    position: relative;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 26px;
+}
+
+.cart:hover {
+    color: #e1a467;
+}
+
+.cart-counter {
+    position: absolute;
+
+    top: 1px;
+    right: -1px;
+
+    min-width: 20px;
+    height: 20px;
+
+    padding: 0 5px;
+
+    border-radius: 50px;
+
+    background: #d45d34;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   БОКОВЕ МЕНЮ
+   ========================================= */
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 360px;
+    max-width: 90vw;
+    height: 100vh;
+
+    background: #ffffff;
+
+    z-index: 2000;
+
+    transform: translateX(-100%);
+
+    transition: transform 0.3s ease;
+
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu.open {
+    transform: translateX(0);
+}
+
+
+/* Затемнення */
+
+.menu-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 1500;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   ЗАГОЛОВОК БОКОВОГО МЕНЮ
+   ========================================= */
+
+.side-menu-header {
+    height: 74px;
+
+    background: #211f1e;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 22px;
+}
+
+.side-menu-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.close-menu {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    transition: 0.2s;
+}
+
+.close-menu:hover {
+    color: #d99a59;
+}
+
+
+/* =========================================
+   ПРОФІЛЬ
+   ========================================= */
+
+.profile-box {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 22px;
+
+    background: #f4eee7;
+
+    border-bottom: 1px solid #e4ddd6;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #9b5c2e;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.profile-info strong {
+    font-size: 16px;
+}
+
+.profile-info span {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   ПОСИЛАННЯ БОКОВОГО МЕНЮ
+   ========================================= */
+
+.side-navigation {
+    padding: 10px 0;
+
+    overflow-y: auto;
+}
+
+.side-link {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 23px;
+
+    color: #302820;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.side-link span:first-child {
+    width: 25px;
+
+    text-align: center;
+
+    font-size: 20px;
+}
+
+.side-link:hover {
+    background: #f4eee7;
+
+    color: #9b5c2e;
+
+    padding-left: 28px;
+}
+
+.side-link.active {
+    background: #eee4d9;
+
+    color: #9b5c2e;
+
+    font-weight: 600;
+
+    border-left: 4px solid #9b5c2e;
+}
+
+
+/* =========================================
+   НИЖНЯ ЧАСТИНА МЕНЮ
+   ========================================= */
+
+.side-menu-bottom {
+    margin-top: auto;
+
+    padding: 15px 22px;
+
+    border-top: 1px solid #e2ddd8;
+}
+
+.bottom-link {
+    display: block;
+
+    padding: 10px 0;
+
+    color: #65615d;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.bottom-link:hover {
+    color: #9b5c2e;
+}
+
+
+/* =========================================
+   ГОЛОВНИЙ БАНЕР
+   ========================================= */
+
+.hero {
+    min-height: calc(100vh - 74px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    /* КАРТИНКА */
+    background-image: url("../image/fon_index.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* =========================================
+   ГРАДІЄНТ ПОВЕРХ КАРТИНКИ
+   ========================================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25, 15, 10, 0.90) 0%,
+            rgba(25, 15, 10, 0.70) 30%,
+            rgba(25, 15, 10, 0.35) 55%,
+            rgba(25, 15, 10, 0.05) 80%
+        );
+
+    pointer-events: none;
+}
+
+/* =========================================
+   ТЕКСТ ПОВЕРХ ГРАДІЄНТА
+   ========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 720px;
+}
+
+.hero-label {
+    color: #dfaa71;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    color: #ffffff;
+
+    font-size: clamp(42px, 5vw, 72px);
+
+    line-height: 1.05;
+
+    margin: 20px 0;
+}
+
+.hero p {
+    max-width: 600px;
+
+    color: #eeeeee;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background: #a96736;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.hero-button:hover {
+    background: #c27c43;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   АДАПТАЦІЯ
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .logo {
+        min-width: auto;
+    }
+
+    .catalog-button {
+        display: none;
+    }
+
+    .account-text {
+        display: none;
+    }
+
+    .account {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .header-container {
+        padding: 0 12px;
+
+        gap: 10px;
+    }
+
+    .logo-subtitle {
+        display: none;
+    }
+
+    .logo-name {
+        font-size: 19px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 20px;
+    }
+
+    .search {
+        max-width: none;
+    }
+
+    .search-button {
+        width: 55px;
+    }
+
+    .hero {
+        padding: 40px 25px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .menu-button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo-name {
+        display: none;
+    }
+
+    .logo {
+        min-width: 42px;
+    }
+
+    .account {
+        display: none;
+    }
+
+    .search input {
+        font-size: 14px;
+        padding: 0 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+
+/* =========================================
+   КАТЕГОРІЇ ТОВАРІВ
+   ========================================= */
+
+.categories {
+    width: 100%;
+
+    padding: 90px 50px;
+
+    background: #f5f2ed;
+}
+
+
+.categories-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   ЗАГОЛОВОК
+   ========================================= */
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 45px;
+}
+
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #ad6d3b;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.section-heading h2 {
+    margin-bottom: 12px;
+
+    color: #29211b;
+
+    font-size: clamp(32px, 4vw, 46px);
+
+    line-height: 1.1;
+}
+
+
+.section-heading p {
+    color: #77706a;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   СІТКА КАТЕГОРІЙ
+   ========================================= */
+
+.categories-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   КАРТКА
+   ========================================= */
+
+.category-card {
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    background: #2d2118;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.category-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================
+   ФОТО
+   ========================================= */
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.category-card:hover img {
+    transform: scale(1.07);
+}
+
+
+/* =========================================
+   ЗАТЕМНЕННЯ
+   ========================================= */
+
+.category-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(20, 13, 9, 0.88) 0%,
+            rgba(20, 13, 9, 0.42) 45%,
+            rgba(20, 13, 9, 0.05) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   ТЕКСТ КАРТКИ
+   ========================================= */
+
+.category-overlay {
+    position: absolute;
+
+    left: 24px;
+    right: 24px;
+    bottom: 22px;
+
+    z-index: 2;
+}
+
+
+.category-overlay h3 {
+    margin-bottom: 7px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.category-overlay span {
+    color: #e5b07b;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+
+.category-card:hover
+.category-overlay span {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   ПЛАНШЕТ
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .categories {
+        padding: 75px 30px;
+    }
+
+    .categories-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .category-card {
+        height: 280px;
+    }
+}
+
+
+/* =========================================
+   ТЕЛЕФОН
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .categories {
+        padding: 60px 18px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .category-card {
+        height: 250px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .section-heading p {
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   ПОПУЛЯРНІ ТОВАРИ
+   ========================================= */
+
+.popular-products {
+    width: 100%;
+
+    padding: 90px 50px;
+
+    background: #ffffff;
+}
+
+
+.products-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   ЗАГОЛОВОК
+   ========================================= */
+
+.products-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+
+.products-heading h2 {
+    margin-top: 8px;
+
+    color: #29211b;
+
+    font-size: clamp(32px, 4vw, 44px);
+
+    line-height: 1.1;
+}
+
+
+.all-products-link {
+    flex-shrink: 0;
+
+    color: #a96736;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.all-products-link:hover {
+    color: #d07d3c;
+}
+
+
+/* =========================================
+   СІТКА
+   ========================================= */
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   КАРТКА
+   ========================================= */
+
+.product-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e3de;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================================
+   БЛОК ФОТО
+   ========================================= */
+
+.product-image-box {
+    position: relative;
+
+    width: 100%;
+    height: 280px;
+
+    overflow: hidden;
+
+    background: #f3f0ec;
+}
+
+
+.product-image-box img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.product-card:hover .product-image-box img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   БЕЙДЖ
+   ========================================= */
+
+.product-badge {
+    position: absolute;
+
+    top: 13px;
+    left: 13px;
+
+    z-index: 3;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    background: #a96736;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.product-badge.new {
+    background: #2d9f57;
+}
+
+
+.product-badge.sale {
+    background: #d75a36;
+}
+
+
+/* =========================================
+   ОБРАНЕ
+   ========================================= */
+
+.favorite-button {
+    position: absolute;
+
+    top: 11px;
+    right: 11px;
+
+    z-index: 3;
+
+    width: 37px;
+    height: 37px;
+
+    border: 1px solid #e4ded8;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    color: #6f6862;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.favorite-button:hover {
+    color: #d85d49;
+
+    background: #ffffff;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   ІНФОРМАЦІЯ ПРО ТОВАР
+   ========================================= */
+
+.product-info {
+    padding: 18px;
+}
+
+
+/* =========================================
+   РЕЙТИНГ
+   ========================================= */
+
+.product-rating {
+    margin-bottom: 10px;
+
+    color: #e79a2d;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+.product-rating span {
+    color: #8d8883;
+
+    letter-spacing: 0;
+
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   НАЗВА
+   ========================================= */
+
+.product-title {
+    color: #2b241e;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   ОПИС
+   ========================================= */
+
+.product-description {
+    min-height: 40px;
+
+    color: #7a736d;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   НИЖНЯ ЧАСТИНА
+   ========================================= */
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+
+/* =========================================
+   ЦІНА
+   ========================================= */
+
+.product-price {
+    color: #241d18;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+
+.old-price {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #aaa29b;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    text-decoration: line-through;
+}
+
+
+/* =========================================
+   КНОПКА КОШИКА
+   ========================================= */
+
+.add-cart-button {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #a96736;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.add-cart-button:hover {
+    background: #c07943;
+
+    transform: translateY(-2px);
+}
+
+
+.add-cart-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ПЛАНШЕТ
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .popular-products {
+        padding: 75px 30px;
+    }
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   ТЕЛЕФОН
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .popular-products {
+        padding: 60px 18px;
+    }
+
+    .products-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        margin-bottom: 25px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .product-image-box {
+        height: 280px;
+    }
+}
+
+/* =========================================
+   ПЕРЕВАГИ МАГАЗИНУ
+   ========================================= */
+
+.advantages {
+    width: 100%;
+
+    padding: 55px 40px;
+
+    background: #f1ebe4;
+
+    border-top: 1px solid #e4ddd5;
+    border-bottom: 1px solid #e4ddd5;
+}
+
+
+.advantages-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 35px;
+}
+
+
+/* =========================================
+   ОКРЕМИЙ ПУНКТ
+   ========================================= */
+
+.advantage-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   ІКОНКА
+   ========================================= */
+
+.advantage-icon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #a96736;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px rgba(93, 53, 25, 0.15);
+}
+
+
+/* =========================================
+   ТЕКСТ
+   ========================================= */
+
+.advantage-content h3 {
+    margin-bottom: 7px;
+
+    color: #2b241e;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+.advantage-content p {
+    color: #766f69;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   ПЛАНШЕТ
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .advantages {
+        padding: 50px 30px;
+    }
+
+    .advantages-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 30px;
+    }
+}
+
+
+/* =========================================
+   ТЕЛЕФОН
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .advantages {
+        padding: 45px 20px;
+    }
+
+    .advantages-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .advantage-icon {
+        width: 46px;
+        height: 46px;
+
+        font-size: 19px;
+    }
+}
+/* =========================================
+   ПРО НАС
+   ========================================= */
+
+.about-preview {
+    width: 100%;
+
+    padding: 100px 50px;
+
+    background: #f8f5f1;
+}
+
+
+.about-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 0.9fr);
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   ФОТО
+   ========================================= */
+
+.about-image {
+    position: relative;
+
+    min-height: 540px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background: #ddd3c8;
+}
+
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   БЕЙДЖ НА ФОТО
+   ========================================= */
+
+.about-image-badge {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    min-width: 150px;
+
+    padding: 16px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.about-image-badge strong {
+    color: #a96736;
+
+    font-size: 28px;
+
+    line-height: 1;
+}
+
+
+.about-image-badge span {
+    margin-top: 5px;
+
+    color: #665f58;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   ТЕКСТ
+   ========================================= */
+
+.about-content {
+    max-width: 600px;
+}
+
+
+.about-content h2 {
+    margin: 10px 0 22px;
+
+    color: #29211b;
+
+    font-size: clamp(36px, 4vw, 56px);
+
+    line-height: 1.05;
+}
+
+
+.about-main-text {
+    margin-bottom: 15px;
+
+    color: #4f4842;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+}
+
+
+.about-secondary-text {
+    margin-bottom: 28px;
+
+    color: #77706a;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   СПИСОК ПЕРЕВАГ
+   ========================================= */
+
+.about-points {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+
+    margin-bottom: 32px;
+}
+
+
+.about-point {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    color: #403831;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.about-point-icon {
+    width: 24px;
+    height: 24px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #a96736;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   КНОПКА
+   ========================================= */
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 22px;
+
+    background: #a96736;
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.about-button span {
+    font-size: 19px;
+
+    transition: transform 0.2s ease;
+}
+
+
+.about-button:hover {
+    background: #c07843;
+
+    transform: translateY(-2px);
+}
+
+
+.about-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   ПЛАНШЕТ
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .about-preview {
+        padding: 80px 30px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .about-content {
+        max-width: 800px;
+    }
+
+    .about-image {
+        min-height: 450px;
+    }
+}
+
+
+/* =========================================
+   ТЕЛЕФОН
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .about-preview {
+        padding: 60px 18px;
+    }
+
+    .about-container {
+        gap: 30px;
+    }
+
+    .about-image {
+        min-height: 360px;
+
+        border-radius: 12px;
+    }
+
+    .about-image-badge {
+        left: 15px;
+        bottom: 15px;
+
+        min-width: 130px;
+
+        padding: 13px 15px;
+    }
+
+    .about-image-badge strong {
+        font-size: 24px;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .about-main-text {
+        font-size: 16px;
+    }
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    width: 100%;
+
+    background: #211f1e;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   ОСНОВНА ЧАСТИНА FOOTER
+   ========================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 70px 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1.2fr
+        1.4fr;
+
+    gap: 50px;
+}
+
+
+/* =========================================
+   КОЛОНКИ
+   ========================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 13px;
+}
+
+
+.footer-column h3 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+.footer-column > a:not(.footer-logo) {
+    color: #aaa5a1;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color 0.2s ease;
+}
+
+
+.footer-column > a:not(.footer-logo):hover {
+    color: #e1a365;
+}
+
+
+/* =========================================
+   ЛОГОТИП
+   ========================================= */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-logo img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+
+.footer-logo-text {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.footer-logo-text strong {
+    color: #ffffff;
+
+    font-size: 21px;
+
+    line-height: 1;
+}
+
+
+.footer-logo-text span {
+    margin-top: 5px;
+
+    color: #938d89;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   ОПИС
+   ========================================= */
+
+.footer-description {
+    max-width: 300px;
+
+    color: #938d89;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   СОЦІАЛЬНІ МЕРЕЖІ
+   ========================================= */
+
+.footer-socials {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 8px;
+}
+
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #454240;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.footer-socials a:hover {
+    background: #a96736;
+
+    border-color: #a96736;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   КОНТАКТИ
+   ========================================= */
+
+.footer-contacts {
+    gap: 16px;
+}
+
+
+.contact-item {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #aaa5a1 !important;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color 0.2s ease;
+}
+
+
+.contact-item:hover {
+    color: #e1a365 !important;
+}
+
+
+.contact-icon {
+    width: 22px;
+
+    color: #a96736;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   КНОПКА КОНТАКТІВ
+   ========================================= */
+
+.footer-contact-button {
+    display: inline-flex;
+
+    margin-top: 5px;
+
+    padding: 11px 16px;
+
+    border: 1px solid #5e5853;
+
+    border-radius: 6px;
+
+    color: #ffffff !important;
+
+    text-decoration: none;
+
+    font-size: 13px !important;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.footer-contact-button:hover {
+    background: #a96736;
+
+    border-color: #a96736;
+}
+
+
+/* =========================================
+   НИЖНЯ ЧАСТИНА
+   ========================================= */
+
+.footer-bottom {
+    border-top: 1px solid #3a3836;
+}
+
+
+.footer-bottom-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    min-height: 65px;
+
+    padding: 15px 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.footer-bottom-container > span {
+    color: #77716d;
+
+    font-size: 12px;
+}
+
+
+.footer-bottom-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.footer-bottom-links a {
+    color: #77716d;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: color 0.2s ease;
+}
+
+
+.footer-bottom-links a:hover {
+    color: #dca36e;
+}
+
+
+/* =========================================
+   ПЛАНШЕТ
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 45px;
+
+        padding: 60px 30px;
+    }
+
+    .footer-bottom-container {
+        padding: 15px 30px;
+    }
+}
+
+
+/* =========================================
+   ТЕЛЕФОН
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 50px 20px;
+    }
+
+    .footer-bottom-container {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
