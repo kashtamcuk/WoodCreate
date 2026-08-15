@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WoodCraft — магазин</title>
+
+    <link rel="stylesheet" href="style/index_style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ВЕРХНЯ ПАНЕЛЬ
+         ========================= -->
+
+    <header class="top-header">
+
+        <div class="header-container">
+
+            <!-- Кнопка меню -->
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Відкрити меню"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <!-- ЛОГОТИП -->
+            <a href="index.html" class="logo">
+
+                <img
+                    src="image/logo.png"
+                    alt="Логотип"
+                    class="logo-image"
+                >
+
+                <div class="logo-text">
+
+                    <span class="logo-name">
+                        WOODCRAFT
+                    </span>
+
+                    <span class="logo-subtitle">
+                        дерев'яні вироби
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Каталог -->
+            <a href="catalog.html" class="catalog-button">
+
+                <span class="catalog-icon">
+                    ▦
+                </span>
+
+                <span>
+                    Каталог
+                </span>
+
+            </a>
+
+
+            <!-- Пошук -->
+            <div class="search">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Я шукаю..."
+                >
+
+                <button
+                    class="search-button"
+                    id="searchButton"
+                    type="button"
+                >
+                    🔍
+                </button>
+
+            </div>
+
+
+            <!-- Акаунт -->
+            <a href="#" class="account">
+
+                <span class="account-icon">
+                    👤
+                </span>
+
+                <span class="account-text">
+
+                    <small>
+                        Вхід
+                    </small>
+
+                    Реєстрація
+
+                </span>
+
+            </a>
+
+
+            <!-- Кошик -->
+            <a href="#" class="cart">
+
+                <span class="cart-icon">
+                    🛒
+                </span>
+
+                <span
+                    class="cart-counter"
+                    id="cartCounter"
+                >
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         БОКОВЕ МЕНЮ
+         ========================= -->
+
+    <div
+        class="menu-overlay"
+        id="menuOverlay"
+    ></div>
+
+
+    <aside
+        class="side-menu"
+        id="sideMenu"
+    >
+
+        <div class="side-menu-header">
+
+            <div class="side-menu-title">
+                Меню
+            </div>
+
+            <button
+                class="close-menu"
+                id="closeMenu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Профіль -->
+        <div class="profile-box">
+
+            <div class="profile-icon">
+                👤
+            </div>
+
+            <div class="profile-info">
+
+                <strong>
+                    Мій профіль
+                </strong>
+
+                <span>
+                    Увійдіть або зареєструйтесь
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Навігація -->
+        <nav class="side-navigation">
+
+            <a
+                href="index.html"
+                class="side-link active"
+            >
+                <span>🏠</span>
+                <span>Головна</span>
+            </a>
+
+            <a
+                href="catalog.html"
+                class="side-link"
+            >
+                <span>🛍️</span>
+                <span>Каталог</span>
+            </a>
+
+            <a
+                href="#"
+                class="side-link"
+            >
+                <span>❤️</span>
+                <span>Обране</span>
+            </a>
+
+            <a
+                href="#"
+                class="side-link"
+            >
+                <span>📦</span>
+                <span>Мої замовлення</span>
+            </a>
+
+            <a
+                href="#"
+                class="side-link"
+            >
+                <span>🚚</span>
+                <span>Доставка та оплата</span>
+            </a>
+
+            <a
+                href="about.html"
+                class="side-link"
+            >
+                <span>ℹ️</span>
+                <span>Про нас</span>
+            </a>
+
+            <a
+                href="contacts.html"
+                class="side-link"
+            >
+                <span>📞</span>
+                <span>Контакти</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Нижнє меню -->
+        <div class="side-menu-bottom">
+
+            <a
+                href="#"
+                class="bottom-link"
+            >
+                ⚙️ Налаштування
+            </a>
+
+            <a
+                href="#"
+                class="bottom-link"
+            >
+                ❓ Допомога
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         ГОЛОВНИЙ ЕКРАН
+         ========================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    НАТУРАЛЬНЕ ДЕРЕВО • РУЧНА РОБОТА
+                </span>
+
+                <h1>
+                    Створюємо вироби,
+                    які хочеться залишити
+                    на роки
+                </h1>
+
+                <p>
+                    Якісні дерев'яні вироби
+                    для дому, подарунків
+                    та затишку.
+                </p>
+
+                <a
+                    href="catalog.html"
+                    class="hero-button"
+                >
+                    Переглянути каталог
+                </a>
+
+            </div>
+
+        </section>
+        </section>
+
+
+<!-- =========================================
+     КАТЕГОРІЇ ТОВАРІВ
+     ========================================= -->
+
+        <section class="categories">
+
+            <div class="categories-container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        НАШ АСОРТИМЕНТ
+                    </span>
+
+                    <h2>
+                        Категорії товарів
+                    </h2>
+
+                    <p>
+                        Оберіть категорію та знайдіть
+                        те, що вам потрібно.
+                    </p>
+
+                </div>
+                
+
+
+                <div class="categories-grid">
+
+                    <!-- Категорія 1 -->
+                    <a href="catalog.html?category=home" class="category-card">
+
+                        <img
+                            src="image/category-home.jpg"
+                            alt="Товари для дому"
+                        >
+
+                        <div class="category-overlay">
+
+                            <h3>
+                                Для дому
+                            </h3>
+
+                            <span>
+                                Переглянути →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    
+
+
+                    <!-- Категорія 2 -->
+                    <a href="catalog.html?category=kitchen" class="category-card">
+
+                        <img
+                            src="image/category-kitchen.jpg"
+                            alt="Кухонні вироби"
+                        >
+
+                        <div class="category-overlay">
+
+                            <h3>
+                                Для кухні
+                            </h3>
+
+                            <span>
+                                Переглянути →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- Категорія 3 -->
+                    <a href="catalog.html?category=decor" class="category-card">
+
+                        <img
+                            src="image/category-decor.jpg"
+                            alt="Декоративні вироби"
+                        >
+
+                        <div class="category-overlay">
+
+                            <h3>
+                                Декор
+                            </h3>
+
+                            <span>
+                                Переглянути →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- Категорія 4 -->
+                    <a href="catalog.html?category=furniture" class="category-card">
+
+                        <img
+                            src="image/category-furniture.jpg"
+                            alt="Меблі"
+                        >
+
+                        <div class="category-overlay">
+
+                            <h3>
+                                Меблі
+                            </h3>
+
+                            <span>
+                                Переглянути →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- Категорія 5 -->
+                    <a href="catalog.html?category=gifts" class="category-card">
+
+                        <img
+                            src="image/category-gifts.jpg"
+                            alt="Подарунки"
+                        >
+
+                        <div class="category-overlay">
+
+                            <h3>
+                                Подарунки
+                            </h3>
+
+                            <span>
+                                Переглянути →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- Категорія 6 -->
+                    <a href="catalog.html?category=other" class="category-card">
+
+                        <img
+                            src="image/category-other.jpg"
+                            alt="Інші товари"
+                        >
+
+                        <div class="category-overlay">
+
+                            <h3>
+                                Інше
+                            </h3>
+
+                            <span>
+                                Переглянути →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+     ПОПУЛЯРНІ ТОВАРИ
+     ========================================= -->
+
+<section class="popular-products">
+
+    <div class="products-container">
+
+        <!-- Заголовок -->
+        <div class="products-heading">
+
+            <div>
+                <span class="section-label">
+                    ВИБІР ПОКУПЦІВ
+                </span>
+
+                <h2>
+                    Популярні товари
+                </h2>
+            </div>
+
+            <a href="catalog.html" class="all-products-link">
+                Дивитися всі →
+            </a>
+
+        </div>
+
+
+        <!-- Сітка товарів -->
+        <div class="products-grid">
+
+
+            <!-- =================================
+                 ТОВАР 1
+                 ================================= -->
+
+            <article class="product-card">
+
+                <div class="product-image-box">
+
+                    <span class="product-badge">
+                        Хіт
+                    </span>
+
+                    <button
+                        class="favorite-button"
+                        type="button"
+                        aria-label="Додати в обране"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="image/product-1.jpg"
+                        alt="Дерев'яна обробна дошка"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ★★★★★
+                        <span>(24)</span>
+                    </div>
+
+                    <h3 class="product-title">
+                        Дерев'яна обробна дошка
+                    </h3>
+
+                    <p class="product-description">
+                        Натуральна деревина, ручна обробка.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+                            499 грн
+                        </div>
+
+                        <button
+                            class="add-cart-button"
+                            type="button"
+                        >
+                            🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 ТОВАР 2
+                 ================================= -->
+
+            <article class="product-card">
+
+                <div class="product-image-box">
+
+                    <span class="product-badge new">
+                        Новинка
+                    </span>
+
+                    <button
+                        class="favorite-button"
+                        type="button"
+                        aria-label="Додати в обране"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="image/product-2.jpg"
+                        alt="Дерев'яна миска"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ★★★★★
+                        <span>(18)</span>
+                    </div>
+
+                    <h3 class="product-title">
+                        Дерев'яна миска
+                    </h3>
+
+                    <p class="product-description">
+                        Екологічна миска для щоденного використання.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+                            649 грн
+                        </div>
+
+                        <button
+                            class="add-cart-button"
+                            type="button"
+                        >
+                            🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 ТОВАР 3
+                 ================================= -->
+
+            <article class="product-card">
+
+                <div class="product-image-box">
+
+                    <button
+                        class="favorite-button"
+                        type="button"
+                        aria-label="Додати в обране"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="image/product-3.jpg"
+                        alt="Дерев'яний органайзер"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ★★★★★
+                        <span>(31)</span>
+                    </div>
+
+                    <h3 class="product-title">
+                        Дерев'яний органайзер
+                    </h3>
+
+                    <p class="product-description">
+                        Зручний органайзер для дому та робочого столу.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <div class="product-price">
+                            799 грн
+                        </div>
+
+                        <button
+                            class="add-cart-button"
+                            type="button"
+                        >
+                            🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+                    <!-- =================================
+                        ТОВАР 4
+                        ================================= -->
+
+                    <article class="product-card">
+
+                        <div class="product-image-box">
+
+                            <span class="product-badge sale">
+                                -15%
+                            </span>
+
+                            <button
+                                class="favorite-button"
+                                type="button"
+                                aria-label="Додати в обране"
+                            >
+                                ♡
+                            </button>
+
+                            <img
+                                src="image/product-4.jpg"
+                                alt="Дерев'яний подарунковий набір"
+                            >
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <div class="product-rating">
+                                ★★★★★
+                                <span>(42)</span>
+                            </div>
+
+                            <h3 class="product-title">
+                                Подарунковий набір
+                            </h3>
+
+                            <p class="product-description">
+                                Набір дерев'яних виробів для чудового подарунка.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <span class="old-price">
+                                        1 199 грн
+                                    </span>
+
+                                    999 грн
+
+                                </div>
+
+                                <button
+                                    class="add-cart-button"
+                                    type="button"
+                                >
+                                    🛒
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- =========================================
+     ПЕРЕВАГИ МАГАЗИНУ
+     ========================================= -->
+
+        <section class="advantages">
+
+            <div class="advantages-container">
+
+                <div class="advantage-item">
+
+                    <div class="advantage-icon">
+                        ✓
+                    </div>
+
+                    <div class="advantage-content">
+
+                        <h3>
+                            Якість
+                        </h3>
+
+                        <p>
+                            Ретельно підбираємо матеріали
+                            та контролюємо якість кожного виробу.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="advantage-item">
+
+                    <div class="advantage-icon">
+                        ✋
+                    </div>
+
+                    <div class="advantage-content">
+
+                        <h3>
+                            Ручна робота
+                        </h3>
+
+                        <p>
+                            Багато наших виробів створюються
+                            вручну з увагою до кожної деталі.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="advantage-item">
+
+                    <div class="advantage-icon">
+                        🚚
+                    </div>
+
+                    <div class="advantage-content">
+
+                        <h3>
+                            Швидка доставка
+                        </h3>
+
+                        <p>
+                            Відправляємо замовлення по Україні
+                            зручним для вас способом.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="advantage-item">
+
+                    <div class="advantage-icon">
+                        ★
+                    </div>
+
+                    <div class="advantage-content">
+
+                        <h3>
+                            Гарантія
+                        </h3>
+
+                        <p>
+                            Піклуємося про якість замовлення
+                            та підтримуємо наших покупців.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+     ПРО НАС
+     ========================================= -->
+
+<section class="about-preview">
+
+    <div class="about-container">
+
+        <!-- Фотографія -->
+        <div class="about-image">
+
+            <img
+                src="image/about-workshop.jpg"
+                alt="Наша майстерня"
+            >
+
+            <div class="about-image-badge">
+
+                <strong>
+                    100%
+                </strong>
+
+                <span>
+                    уваги до деталей
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Текст -->
+        <div class="about-content">
+
+            <span class="section-label">
+                ПРО НАС
+            </span>
+
+            <h2>
+                Створюємо речі,
+                якими хочеться
+                користуватися
+            </h2>
+
+            <p class="about-main-text">
+                Ми створюємо якісні та красиві вироби,
+                приділяючи особливу увагу матеріалам,
+                дизайну та деталям.
+            </p>
+
+            <p class="about-secondary-text">
+                Для нас важливо не просто виготовити
+                товар, а зробити річ, яка буде приносити
+                користь і задоволення протягом багатьох років.
+            </p>
+
+
+            <!-- Переваги -->
+            <div class="about-points">
+
+                <div class="about-point">
+
+                    <span class="about-point-icon">
+                        ✓
+                    </span>
+
+                    <span>
+                        Якісні матеріали
+                    </span>
+
+                </div>
+
+
+                <div class="about-point">
+
+                    <span class="about-point-icon">
+                        ✓
+                    </span>
+
+                    <span>
+                        Увага до кожної деталі
+                    </span>
+
+                </div>
+
+
+                <div class="about-point">
+
+                    <span class="about-point-icon">
+                        ✓
+                    </span>
+
+                    <span>
+                        Надійна упаковка
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="about.html"
+                class="about-button"
+            >
+                Дізнатися більше
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- =================================
+             КОЛОНКА 1 — ПРО МАГАЗИН
+             ================================= -->
+
+        <div class="footer-column footer-brand">
+
+            <a href="index.html" class="footer-logo">
+
+                <img
+                    src="image/logo.png"
+                    alt="Логотип"
+                >
+
+                <div class="footer-logo-text">
+
+                    <strong>
+                        WOODCRAFT
+                    </strong>
+
+                    <span>
+                        магазин виробів
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <p class="footer-description">
+                Якісні товари, гарний дизайн
+                та увага до кожного замовлення.
+            </p>
+
+
+            <!-- Соціальні мережі -->
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Instagram">
+                    ◎
+                </a>
+
+                <a href="#" aria-label="Telegram">
+                    ✈
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    f
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    ▶
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             КОЛОНКА 2 — МАГАЗИН
+             ================================= -->
+
+        <div class="footer-column">
+
+            <h3>
+                Магазин
+            </h3>
+
+            <a href="index.html">
+                Головна
+            </a>
+
+            <a href="catalog.html">
+                Каталог
+            </a>
+
+            <a href="#">
+                Популярні товари
+            </a>
+
+            <a href="#">
+                Новинки
+            </a>
+
+            <a href="#">
+                Обране
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             КОЛОНКА 3 — ДОПОМОГА
+             ================================= -->
+
+        <div class="footer-column">
+
+            <h3>
+                Покупцям
+            </h3>
+
+            <a href="about.html">
+                Про нас
+            </a>
+
+            <a href="#">
+                Доставка та оплата
+            </a>
+
+            <a href="#">
+                Умови повернення
+            </a>
+
+            <a href="#">
+                Гарантія
+            </a>
+
+            <a href="#">
+                Часті запитання
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+             КОЛОНКА 4 — КОНТАКТИ
+             ================================= -->
+
+        <div class="footer-column footer-contacts">
+
+            <h3>
+                Контакти
+            </h3>
+
+
+            <a href="tel:+380000000000" class="contact-item">
+
+                <span class="contact-icon">
+                    ☎
+                </span>
+
+                <span>
+                    +380 XX XXX XX XX
+                </span>
+
+            </a>
+
+
+            <a
+                href="mailto:info@example.com"
+                class="contact-item"
+            >
+
+                <span class="contact-icon">
+                    ✉
+                </span>
+
+                <span>
+                    info@example.com
+                </span>
+
+            </a>
+
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    ●
+                </span>
+
+                <span>
+                    Україна
+                </span>
+
+            </div>
+
+
+            <a href="contacts.html" class="footer-contact-button">
+                Усі контакти →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         НИЖНЯ ЛІНІЯ
+         ================================= -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <span>
+                © 2026 WoodCraft. Усі права захищені.
+            </span>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Політика конфіденційності
+                </a>
+
+                <a href="#">
+                    Умови використання
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+        </main>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
