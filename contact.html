@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Контакти — WoodCraft</title>
+
+    <link rel="stylesheet" href="style/contactstyle.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+
+        <div class="header-container">
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Відкрити меню"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="index.html" class="logo">
+                <img src="image/logo.png" alt="Логотип" class="logo-image">
+
+                <div class="logo-text">
+                    <span class="logo-name">WOODCRAFT</span>
+                    <span class="logo-subtitle">дерев'яні вироби</span>
+                </div>
+            </a>
+
+            <a href="catalog.html" class="catalog-button">
+                <span class="catalog-icon">▦</span>
+                <span>Каталог</span>
+            </a>
+
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Я шукаю...">
+                <button class="search-button" id="searchButton" type="button">🔍</button>
+            </div>
+
+            <a href="#" class="account">
+                <span class="account-icon">👤</span>
+                <span class="account-text">
+                    <small>Вхід</small>
+                    Реєстрація
+                </span>
+            </a>
+
+            <a href="#" class="cart">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-counter" id="cartCounter">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+
+        <div class="side-menu-header">
+            <div class="side-menu-title">Меню</div>
+            <button class="close-menu" id="closeMenu">×</button>
+        </div>
+
+        <div class="profile-box">
+            <div class="profile-icon">👤</div>
+            <div class="profile-info">
+                <strong>Мій профіль</strong>
+                <span>Увійдіть або зареєструйтесь</span>
+            </div>
+        </div>
+
+        <nav class="side-navigation">
+            <a href="index.html" class="side-link">
+                <span>🏠</span>
+                <span>Головна</span>
+            </a>
+
+            <a href="catalog.html" class="side-link">
+                <span>🛍️</span>
+                <span>Каталог</span>
+            </a>
+
+            <a href="#" class="side-link">
+                <span>❤️</span>
+                <span>Обране</span>
+            </a>
+
+            <a href="about.html" class="side-link">
+                <span>ℹ️</span>
+                <span>Про нас</span>
+            </a>
+
+            <a href="contact.html" class="side-link active">
+                <span>📞</span>
+                <span>Контакти</span>
+            </a>
+        </nav>
+
+        <div class="side-menu-bottom">
+            <a href="#" class="bottom-link">⚙️ Налаштування</a>
+        </div>
+
+    </aside>
+
+    <main class="contact-page">
+
+        <div class="page-container">
+
+            <div class="breadcrumbs">
+                <a href="index.html">Головна</a>
+                <span>/</span>
+                <span>Контакти</span>
+            </div>
+
+            <section class="contact-hero">
+                <div class="section-label">ЗВ'ЯЖІТЬСЯ З НАМИ</div>
+                <h1>Контакти WoodCraft</h1>
+                <p>
+                    Ми завжди на зв'язку: допоможемо з вибором товару, оформленням замовлення
+                    та відповімо на всі питання про доставку, гарантію та оплати.
+                </p>
+            </section>
+
+            <section class="contact-layout">
+
+                <div class="contact-card contact-info">
+                    <h2>Наші контакти</h2>
+
+                    <div class="info-item">
+                        <span class="info-icon">☎</span>
+                        <div>
+                            <small>Телефон</small>
+                            <a href="tel:+380500123456">+380 (50) 012-34-56</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">✉</span>
+                        <div>
+                            <small>Email</small>
+                            <a href="mailto:info@woodcraft.shop">info@woodcraft.shop</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <small>Адреса</small>
+                            <p>м. Київ, вул. Дерев'яна, 18</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">🕒</span>
+                        <div>
+                            <small>Графік роботи</small>
+                            <p>Пн-Нд: 9:00 — 20:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card contact-form-card">
+                    <h2>Напишіть нам</h2>
+
+                    <form class="contact-form">
+                        <div class="form-row two-col">
+                            <label>
+                                <span>Ім'я</span>
+                                <input type="text" placeholder="Ваше ім'я">
+                            </label>
+
+                            <label>
+                                <span>Email</span>
+                                <input type="email" placeholder="your@email.com">
+                            </label>
+                        </div>
+
+                        <label>
+                            <span>Тема</span>
+                            <input type="text" placeholder="Наприклад: питання про доставку">
+                        </label>
+
+                        <label>
+                            <span>Повідомлення</span>
+                            <textarea rows="5" placeholder="Опишіть ваш запит..."></textarea>
+                        </label>
+
+                        <button type="submit" class="primary-button">Надіслати повідомлення</button>
+                    </form>
+                </div>
+
+            </section>
+
+            <section class="map-section">
+                <div class="map-card">
+                    <div class="map-header">
+                        <h2>Де ми знаходимося</h2>
+                        <span>Майстерня та офіс</span>
+                    </div>
+
+                    <div class="map-box">
+                        <div class="map-pin">📍</div>
+                        <div class="map-label">
+                            <strong>WoodCraft</strong>
+                            <span>м. Київ, вул. Дерев'яна, 18</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Чому клієнти обирають нас</h3>
+                    <ul>
+                        <li>Індивідуальна консультація з вибору товару</li>
+                        <li>Швидка доставка по Україні</li>
+                        <li>Гарантія якості на всі вироби</li>
+                        <li>Підтримка до та після покупки</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-column footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="image/logo.png" alt="Логотип">
+                    <div class="footer-logo-text">
+                        <strong>WOODCRAFT</strong>
+                        <span>магазин виробів</span>
+                    </div>
+                </a>
+
+                <p class="footer-description">
+                    Якісні товари, гарний дизайн та увага до кожного замовлення.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#">◎</a>
+                    <a href="#">✈</a>
+                    <a href="#">f</a>
+                    <a href="#">▶</a>
+                </div>
+
+            </div>
+
+            <div class="footer-column">
+                <h3>Магазин</h3>
+                <a href="index.html">Головна</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="#">Популярні товари</a>
+                <a href="#">Новинки</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Покупцям</h3>
+                <a href="about.html">Про нас</a>
+                <a href="#">Доставка та оплата</a>
+                <a href="#">Гарантія</a>
+                <a href="#">Часті запитання</a>
+            </div>
+
+            <div class="footer-column footer-contacts">
+                <h3>Контакти</h3>
+
+                <a href="tel:+380500123456" class="contact-item">
+                    <span class="contact-icon">☎</span>
+                    <span>+380 (50) 012-34-56</span>
+                </a>
+
+                <a href="mailto:info@woodcraft.shop" class="contact-item">
+                    <span class="contact-icon">✉</span>
+                    <span>info@woodcraft.shop</span>
+                </a>
+
+                <div class="contact-item">
+                    <span class="contact-icon">●</span>
+                    <span>Україна</span>
+                </div>
+
+                <a href="contact.html" class="footer-contact-button">Усі контакти →</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <span>© 2026 WoodCraft. Усі права захищені.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Політика конфіденційності</a>
+                    <a href="#">Умови використання</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

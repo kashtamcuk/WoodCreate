@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Про нас — WoodCraft</title>
+
+    <link rel="stylesheet" href="style/about_style.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+
+        <div class="header-container">
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Відкрити меню"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="index.html" class="logo">
+                <img src="image/logo.png" alt="Логотип" class="logo-image">
+
+                <div class="logo-text">
+                    <span class="logo-name">WOODCRAFT</span>
+                    <span class="logo-subtitle">дерев'яні вироби</span>
+                </div>
+            </a>
+
+            <a href="catalog.html" class="catalog-button">
+                <span class="catalog-icon">▦</span>
+                <span>Каталог</span>
+            </a>
+
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Я шукаю...">
+                <button class="search-button" id="searchButton" type="button">🔍</button>
+            </div>
+
+            <a href="#" class="account">
+                <span class="account-icon">👤</span>
+                <span class="account-text">
+                    <small>Вхід</small>
+                    Реєстрація
+                </span>
+            </a>
+
+            <a href="#" class="cart">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-counter" id="cartCounter">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+
+        <div class="side-menu-header">
+            <div class="side-menu-title">Меню</div>
+            <button class="close-menu" id="closeMenu">×</button>
+        </div>
+
+        <div class="profile-box">
+            <div class="profile-icon">👤</div>
+            <div class="profile-info">
+                <strong>Мій профіль</strong>
+                <span>Увійдіть або зареєструйтесь</span>
+            </div>
+        </div>
+
+        <nav class="side-navigation">
+            <a href="index.html" class="side-link">
+                <span>🏠</span>
+                <span>Головна</span>
+            </a>
+
+            <a href="catalog.html" class="side-link">
+                <span>🛍️</span>
+                <span>Каталог</span>
+            </a>
+
+            <a href="#" class="side-link">
+                <span>❤️</span>
+                <span>Обране</span>
+            </a>
+
+            <a href="about.html" class="side-link active">
+                <span>ℹ️</span>
+                <span>Про нас</span>
+            </a>
+
+            <a href="contact.html" class="side-link">
+                <span>📞</span>
+                <span>Контакти</span>
+            </a>
+        </nav>
+
+        <div class="side-menu-bottom">
+            <a href="#" class="bottom-link">⚙️ Налаштування</a>
+        </div>
+
+    </aside>
+
+    <main class="about-page">
+
+        <div class="page-container">
+
+            <div class="breadcrumbs">
+                <a href="index.html">Головна</a>
+                <span>/</span>
+                <span>Про нас</span>
+            </div>
+
+            <section class="about-hero">
+                <div class="section-label">ПРО НАС</div>
+                <h1>WoodCraft — це любов до дерева та продуманий побут</h1>
+                <p>
+                    Ми створюємо практичні та красиві дерев'яні вироби для дому, подарунків
+                    та повсякденного життя. Кожен предмет проходить турботливий підбір матеріалу,
+                    ручну обробку та перевірку якості перед тим, як потрапити до вашого будинку.
+                </p>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <strong>8+</strong>
+                    <span>років досвіду</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>1200+</strong>
+                    <span>виконаних замовлень</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>100%</strong>
+                    <span>натуральне дерево</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>24/7</strong>
+                    <span>підтримка клієнтів</span>
+                </div>
+            </section>
+
+            <section class="story-section">
+                <div class="story-image">
+                    <div class="story-image-inner">
+                        <span>Натуральність</span>
+                    </div>
+                </div>
+
+                <div class="story-content">
+                    <span class="section-label">НАША ІСТОРІЯ</span>
+                    <h2>Ми почали з маленької майстерні і виросли в магазин, який цінує якість</h2>
+
+                    <p>
+                        WoodCraft народився з бажання робити речі, які не просто прикрашають інтер'єр,
+                        а залишаються з людиною на довгі роки. Ми віримо, що дерево має природну красу,
+                        і тому у кожному виробі прагнемо зберегти його характер, текстуру та тепло.
+                    </p>
+
+                    <p>
+                        Наші вироби створюються з увагою до дрібниць: від вибору породи дерева до
+                        фінального покриття і перевірки на практичність. Саме тому клієнти довіряють нам
+                        подарунки, предмети для дому та речі для особливих моментів.
+                    </p>
+                </div>
+            </section>
+
+            <section class="values-section">
+                <div class="section-heading">
+                    <span class="section-label">НАШІ ЦІННОСТІ</span>
+                    <h2>Те, що завжди лежить в основі наших виробів</h2>
+                </div>
+
+                <div class="values-grid">
+                    <article class="value-card">
+                        <div class="value-icon">🌿</div>
+                        <h3>Натуральність</h3>
+                        <p>Ми працюємо з якісною деревиною без штучних композицій і безупинної масовості.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon">🛠️</div>
+                        <h3>Ручна робота</h3>
+                        <p>Кожна деталь проходить контроль якості та увагу майстра, який знає цінність дерева.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon">💛</div>
+                        <h3>Турбота про клієнта</h3>
+                        <p>Ми допомагаємо підібрати правильний виріб і завжди відкриті до конструктивного діалогу.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="process-section">
+                <div class="section-heading">
+                    <span class="section-label">ЯК МИ ПРАЦЮЄМО</span>
+                    <h2>Простий шлях від ідеї до готового виробу</h2>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-item">
+                        <span>01</span>
+                        <h3>Вибір матеріалу</h3>
+                        <p>Ми відбираємо деревину за якістю, текстурою і довговічністю.</p>
+                    </div>
+
+                    <div class="process-item">
+                        <span>02</span>
+                        <h3>Робота майстра</h3>
+                        <p>Кожен виріб формується вручну, з увагою до вузлів і деталей.</p>
+                    </div>
+
+                    <div class="process-item">
+                        <span>03</span>
+                        <h3>Контроль та доставка</h3>
+                        <p>Перед відправкою продукт проходить перевірку і упаковку для безпечної доставки.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="cta-box">
+                    <div>
+                        <span class="section-label">ЗАЦІКАВИЛО?</span>
+                        <h2>Знайдіть свій найбільш вдалий виріб у каталозі</h2>
+                    </div>
+
+                    <a href="catalog.html" class="primary-button">Перейти до каталогу</a>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-column footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="image/logo.png" alt="Логотип">
+                    <div class="footer-logo-text">
+                        <strong>WOODCRAFT</strong>
+                        <span>магазин виробів</span>
+                    </div>
+                </a>
+
+                <p class="footer-description">
+                    Якісні товари, гарний дизайн та увага до кожного замовлення.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#">◎</a>
+                    <a href="#">✈</a>
+                    <a href="#">f</a>
+                    <a href="#">▶</a>
+                </div>
+
+            </div>
+
+            <div class="footer-column">
+                <h3>Магазин</h3>
+                <a href="index.html">Головна</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="#">Популярні товари</a>
+                <a href="#">Новинки</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Покупцям</h3>
+                <a href="about.html">Про нас</a>
+                <a href="#">Гарантія</a>
+            </div>
+
+            <div class="footer-column footer-contacts">
+                <h3>Контакти</h3>
+
+                <a href="tel:+380500123456" class="contact-item">
+                    <span class="contact-icon">☎</span>
+                    <span>+380 (50) 012-34-56</span>
+                </a>
+
+                <a href="mailto:info@woodcraft.shop" class="contact-item">
+                    <span class="contact-icon">✉</span>
+                    <span>info@woodcraft.shop</span>
+                </a>
+
+                <div class="contact-item">
+                    <span class="contact-icon">●</span>
+                    <span>Україна</span>
+                </div>
+
+                <a href="contact.html" class="footer-contact-button">Усі контакти →</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <span>© 2026 WoodCraft. Усі права захищені.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Політика конфіденційності</a>
+                    <a href="#">Умови використання</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
