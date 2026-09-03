@@ -66,6 +66,202 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let minimumRating = 0;
 
+    let currentSort = "popular";
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialSearch = (urlParams.get("q") || "").trim().toLowerCase();
+    const initialCategory = urlParams.get("category") || "all";
+
+    if (searchInput) {
+        searchInput.value = initialSearch;
+    }
+
+    currentSearch = initialSearch;
+
+    if (categoryLinks.length) {
+        const validCategory = Array.from(categoryLinks).some(
+            (link) => (link.dataset.category || "all") === initialCategory
+        );
+
+        if (validCategory) {
+            currentCategory = initialCategory;
+        }
+
+        categoryLinks.forEach((link) => {
+            const isActive = (link.dataset.category || "all") === currentCategory;
+            link.classList.toggle("active", isActive);
+        });
+    }
+
+
+    /* =========================================
+       ПІДГОТОВКА ДАНИХ ТОВАРІВ
+       ========================================= */
+
+    function normalizeProductData() {
+
+        products.forEach((product) => {
+
+            const title =
+                product.dataset.name ||
+                product.querySelector("h2")?.textContent?.trim() ||
+                "";
+
+            if (!product.dataset.name) {
+                product.dataset.name = title;
+            }
+
+            if (!product.dataset.category) {
+                const categoryName = title.toLowerCase();
+
+                if (
+                    categoryName.includes("миска") ||
+                    categoryName.includes("дошка") ||
+                    categoryName.includes("таріл") ||
+                    categoryName.includes("чаш") ||
+                    categoryName.includes("завар") ||
+                    categoryName.includes("піднос")
+                ) {
+                    product.dataset.category = "kitchen";
+                }
+
+                else if (
+                    categoryName.includes("полиц") ||
+                    categoryName.includes("стіл") ||
+                    categoryName.includes("лав") ||
+                    categoryName.includes("шафа")
+                ) {
+                    product.dataset.category = "furniture";
+                }
+
+                else if (
+                    categoryName.includes("набір") ||
+                    categoryName.includes("подар") ||
+                    categoryName.includes("сувен")
+                ) {
+                    product.dataset.category = "gifts";
+                }
+
+                else if (
+                    categoryName.includes("органайз") ||
+                    categoryName.includes("декор") ||
+                    categoryName.includes("рам") ||
+                    categoryName.includes("ваз")
+                ) {
+                    product.dataset.category = "decor";
+                }
+
+                else {
+                    product.dataset.category = "home";
+                }
+            }
+
+            if (!product.dataset.price) {
+                const priceText =
+                    product.querySelector("strong")?.textContent?.replace(/[^\d]/g, "") || "0";
+
+                product.dataset.price = String(Number(priceText) || 0);
+            }
+
+            if (!product.dataset.rating) {
+                const ratingText =
+                    product.querySelector(".product-rating")?.textContent?.trim() || "";
+
+                const ratingMatch = ratingText.match(/(\d+(?:[.,]\d+)?)/);
+                const ratingValue = ratingMatch ? Number(ratingMatch[1].replace(",", ".")) : 0;
+
+                product.dataset.rating = String(ratingValue || 0);
+            }
+
+            if (!product.dataset.popular) {
+                const reviewsText =
+                    product.querySelector(".product-rating span")?.textContent?.match(/\d+/)?.[0] || "0";
+
+                product.dataset.popular = reviewsText;
+            }
+
+            if (!product.dataset.new) {
+                product.dataset.new = "0";
+
+                const badge =
+                    product.querySelector(".product-badge")?.textContent?.trim().toLowerCase() || "";
+
+                if (badge.includes("нов")) {
+                    product.dataset.new = "1";
+                }
+            }
+        });
+    }
+
+    normalizeProductData();
+
+
+    /* =========================================
+       ПІДРАХУНОК КАТЕГОРІЙ
+       ========================================= */
+
+    function updateCategoryCounts() {
+
+        const countByCategory = {
+            all: products.length,
+            home: 0,
+            kitchen: 0,
+            decor: 0,
+            furniture: 0,
+            gifts: 0,
+            other: 0
+        };
+
+        products.forEach((product) => {
+
+            const category = product.dataset.category || "other";
+            countByCategory[category] = (countByCategory[category] || 0) + 1;
+
+        });
+
+        categoryLinks.forEach((link) => {
+
+            const key = link.dataset.category || "all";
+            const count = countByCategory[key] ?? 0;
+            const countNode = link.querySelector(".category-count");
+
+            if (countNode) {
+                countNode.textContent = String(count);
+            }
+
+        });
+
+    }
+
+
+    /* =========================================
+       СОРТУВАННЯ ТОВАРІВ
+       ========================================= */
+
+    function sortProducts(items) {
+
+        const sorted = [...items];
+
+        if (currentSort === "cheap") {
+            sorted.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+        }
+
+        else if (currentSort === "expensive") {
+            sorted.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
+        }
+
+        else if (currentSort === "popular") {
+            sorted.sort((a, b) => Number(b.dataset.popular) - Number(a.dataset.popular));
+        }
+
+        else if (currentSort === "new") {
+            sorted.sort((a, b) => Number(b.dataset.new) - Number(a.dataset.new));
+        }
+
+        return sorted;
+
+    }
+
 
     /* =========================================
        ОТРИМАННЯ ВІДФІЛЬТРОВАНИХ ТОВАРІВ
@@ -139,30 +335,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderProducts() {
 
         const filteredProducts =
-            getFilteredProducts();
-
-
-        /* Спочатку ховаємо всі товари */
+            sortProducts(getFilteredProducts());
 
         products.forEach((product) => {
-
             product.style.display = "none";
-
         });
-
-
-        /* Показуємо потрібні */
 
         filteredProducts.forEach((product) => {
-
             product.style.display = "";
-
             productGrid.appendChild(product);
-
         });
-
-
-        /* Кількість */
 
         productsCount.textContent =
             `${filteredProducts.length} ${
@@ -255,28 +437,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     event.preventDefault();
 
-
                     currentCategory =
                         link.dataset.category;
 
-
-                    /* Активний пункт */
-
                     categoryLinks.forEach(
                         (item) => {
-
-                            item.classList.remove(
-                                "active"
-                            );
-
+                            item.classList.remove("active");
                         }
                     );
 
-
-                    link.classList.add(
-                        "active"
-                    );
-
+                    link.classList.add("active");
 
                     renderProducts();
 
@@ -295,81 +465,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "change",
         () => {
 
-            const value =
-                sortSelect.value;
-
-
-            const sortedProducts =
-                [...products];
-
-
-            if (value === "cheap") {
-
-                sortedProducts.sort(
-                    (a, b) =>
-                        Number(b.dataset.price) -
-                        Number(a.dataset.price)
-                );
-
-                /*
-                    Після цього сортуємо
-                    від дешевого до дорогого.
-                */
-                sortedProducts.sort(
-                    (a, b) =>
-                        Number(a.dataset.price) -
-                        Number(b.dataset.price)
-                );
-
-            }
-
-
-            else if (value === "expensive") {
-
-                sortedProducts.sort(
-                    (a, b) =>
-                        Number(b.dataset.price) -
-                        Number(a.dataset.price)
-                );
-
-            }
-
-
-            else if (value === "popular") {
-
-                sortedProducts.sort(
-                    (a, b) =>
-                        Number(b.dataset.popular) -
-                        Number(a.dataset.popular)
-                );
-
-            }
-
-
-            else if (value === "new") {
-
-                sortedProducts.sort(
-                    (a, b) =>
-                        Number(b.dataset.new) -
-                        Number(a.dataset.new)
-                );
-
-            }
-
-
-            /* Перебудовуємо DOM */
-
-            sortedProducts.forEach(
-                (product) => {
-
-                    productGrid.appendChild(
-                        product
-                    );
-
-                }
-            );
-
-
+            currentSort = sortSelect.value;
             renderProducts();
 
         }
@@ -407,8 +503,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     ? max
                     : Infinity;
 
-
-            /* Якщо максимум менший */
 
             if (
                 maxPrice !== Infinity &&
@@ -457,11 +551,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
 
                     else {
-
-                        /*
-                         * Перший checkbox = 5 зірок
-                         * Другий = 4 і вище.
-                         */
 
                         const ratings =
                             checked.map(
@@ -548,6 +637,7 @@ document.addEventListener("DOMContentLoaded", () => {
        ПЕРШИЙ ЗАПУСК
        ========================================= */
 
+    updateCategoryCounts();
     renderProducts();
 
 });

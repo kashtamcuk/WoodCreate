@@ -2,6 +2,43 @@ const menuButton = document.getElementById("menuButton");
 const closeMenu = document.getElementById("closeMenu");
 const sideMenu = document.getElementById("sideMenu");
 const menuOverlay = document.getElementById("menuOverlay");
+const themeToggle = document.getElementById("themeToggle");
+
+
+// =========================================
+// ТЕМА
+// =========================================
+
+function applyTheme(theme) {
+
+    const isDark = theme === "dark";
+
+    document.body.classList.toggle("dark-theme", isDark);
+
+    if (themeToggle) {
+        themeToggle.textContent = isDark
+            ? "☀️ Світла тема"
+            : "🌙 Чорна тема";
+    }
+
+    localStorage.setItem("woodcraft-theme", theme);
+}
+
+
+const savedTheme = localStorage.getItem("woodcraft-theme") || "light";
+applyTheme(savedTheme);
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const nextTheme = document.body.classList.contains("dark-theme")
+            ? "light"
+            : "dark";
+
+        applyTheme(nextTheme);
+    });
+}
 
 
 // =========================================
@@ -56,7 +93,7 @@ function performSearch() {
         return;
     }
 
-    alert("Пошук: " + searchText);
+    window.location.href = `catalog.html?q=${encodeURIComponent(searchText)}`;
 }
 
 
