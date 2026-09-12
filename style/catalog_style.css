@@ -1,5 +1,5 @@
 /* =========================================
-   ОСНОВНІ НАЛАШТУВАННЯ
+   СКИДАННЯ СТИЛІВ
    ========================================= */
 
 * {
@@ -28,20 +28,18 @@ body {
     top: 0;
 
     width: 100%;
-    height: 74px;
+    height: 65px;
 
-    background: #211f1e;
+    background: #5a2106;
 
     z-index: 1000;
 
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
-
 .header-container {
     width: 100%;
     max-width: 1600px;
-
     height: 100%;
 
     margin: 0 auto;
@@ -67,29 +65,27 @@ body {
     border: none;
     border-radius: 6px;
 
-    background: #393735;
+    background: #5a2106;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     gap: 6px;
 
     cursor: pointer;
 
-    transition: background 0.25s ease;
+    transition: 0.25s ease;
 }
 
 .menu-button span {
-    width: 24px;
-    height: 3px;
-
-    border-radius: 10px;
+    width: 20px;
+    height: 2px;
 
     background: #ffffff;
 
-    transition: background 0.25s ease;
+    transition: 0.25s ease;
 }
 
 .menu-button:hover {
@@ -106,14 +102,14 @@ body {
    ========================================= */
 
 .logo {
+    width: 250px;
+    min-width: 220px;
+    height: 100%;
+
     display: flex;
     align-items: center;
 
-    gap: 10px;
-
-    width: max-content;
-    min-width: 220px;
-    height: 100%;
+    gap: 5px;
 
     text-decoration: none;
 }
@@ -122,11 +118,10 @@ body {
     width: 50px;
     height: 50px;
 
-    flex-shrink: 0;
-
+    object-fit: contain;
     display: block;
 
-    object-fit: contain;
+    flex-shrink: 0;
 
     transition: transform 0.25s ease;
 }
@@ -138,30 +133,16 @@ body {
 .logo-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .logo-name {
     color: #ffffff;
 
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 800;
-
     line-height: 1;
 
     letter-spacing: 0.6px;
-
-    white-space: nowrap;
-}
-
-.logo-subtitle {
-    margin-top: 5px;
-
-    color: #aaa5a1;
-
-    font-size: 10px;
-
-    line-height: 1.1;
 
     white-space: nowrap;
 }
@@ -176,7 +157,8 @@ body {
    ========================================= */
 
 .catalog-button {
-    height: 46px;
+    width: 130px;
+    height: 42px;
 
     flex-shrink: 0;
 
@@ -187,7 +169,7 @@ body {
 
     gap: 10px;
 
-    border: 1px solid #aaa5a1;
+    border: 1px solid #ffffff;
     border-radius: 7px;
 
     color: #ffffff;
@@ -197,20 +179,15 @@ body {
     font-size: 16px;
     font-weight: 600;
 
-    transition: 0.25s ease;
+    transition: 0.25s;
 }
 
-.catalog-button:hover,
+.catalog-button:hover {
+    background: rgba(204, 202, 202, 0.3);
+}
+
 .catalog-button.catalog-active {
-    border-color: #d49a5b;
-
-    background: #302d2b;
-
-    color: #e3ad76;
-}
-
-.catalog-icon {
-    font-size: 23px;
+    background: rgba(204, 202, 202, 0.3);
 }
 
 
@@ -221,16 +198,15 @@ body {
 .search {
     flex: 1;
 
-    min-width: 100px;
+    width: 100%;
     max-width: 800px;
-
-    height: 46px;
+    height: 43px;
 
     display: flex;
 
     background: #ffffff;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
     overflow: hidden;
 }
@@ -255,66 +231,27 @@ body {
 }
 
 .search-button {
-    width: 70px;
+    width: 83px;
 
     flex-shrink: 0;
 
     border: none;
+    border-radius: 8px;
 
     background: #2d9f57;
 
     color: #ffffff;
 
-    font-size: 19px;
+    font-size: 16px;
+    font-weight: bold;
 
     cursor: pointer;
 
-    transition: background 0.2s ease;
+    transition: 0.2s;
 }
 
 .search-button:hover {
-    background: #248b4a;
-}
-
-
-/* =========================================
-   АКАУНТ
-   ========================================= */
-
-.account {
-    min-width: 100px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 9px;
-
-    color: #ffffff;
-
-    text-decoration: none;
-}
-
-.account-icon {
-    font-size: 25px;
-}
-
-.account-text {
-    display: flex;
-    flex-direction: column;
-
-    font-size: 14px;
-
-    line-height: 1.2;
-}
-
-.account-text small {
-    color: #a9a5a2;
-
-    font-size: 11px;
-}
-
-.account:hover {
-    color: #e3aa70;
+    background: #27c460;
 }
 
 
@@ -334,65 +271,19 @@ body {
     align-items: center;
     justify-content: center;
 
+    border-radius: 7px;
+
     color: #ffffff;
+
+    font-size: 26px;
 
     text-decoration: none;
 
-    font-size: 26px;
+    transition: 0.2s;
 }
 
 .cart:hover {
-    color: #e1a467;
-}
-
-.cart-counter {
-    position: absolute;
-
-    top: 1px;
-    right: -1px;
-
-    min-width: 20px;
-    height: 20px;
-
-    padding: 0 5px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50px;
-
-    background: #d45d34;
-
-    color: #ffffff;
-
-    font-size: 11px;
-    font-weight: 700;
-}
-
-
-/* =========================================
-   ЗАТЕМНЕННЯ БОКОВОГО МЕНЮ
-   ========================================= */
-
-.menu-overlay {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 1500;
-
-    background: rgba(0, 0, 0, 0.5);
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: 0.3s ease;
-}
-
-.menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
+    background: #5a3d20;
 }
 
 
@@ -406,22 +297,22 @@ body {
     top: 0;
     left: 0;
 
-    width: 360px;
+    width: 320px;
     max-width: 90vw;
     height: 100vh;
 
-    z-index: 2000;
+    display: flex;
+    flex-direction: column;
 
-    background: #ffffff;
+    background: #dbd4d4;
+
+    z-index: 2000;
 
     transform: translateX(-100%);
 
     transition: transform 0.3s ease;
 
     box-shadow: 5px 0 20px rgba(0, 0, 0, 0.25);
-
-    display: flex;
-    flex-direction: column;
 }
 
 .side-menu.open {
@@ -430,11 +321,35 @@ body {
 
 
 /* =========================================
+   ЗАТЕМНЕННЯ
+   ========================================= */
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 1500;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
    ЗАГОЛОВОК БОКОВОГО МЕНЮ
    ========================================= */
 
 .side-menu-header {
-    height: 74px;
+    height: 65px;
 
     padding: 0 22px;
 
@@ -442,12 +357,21 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    background: #211f1e;
+    background: #5a2106;
 
     color: #ffffff;
 }
 
+.side-menu-header .logo-image {
+    width: 42px;
+    height: 42px;
+}
+
 .side-menu-title {
+    flex: 1;
+
+    margin-left: 10px;
+
     font-size: 22px;
     font-weight: 700;
 }
@@ -462,11 +386,12 @@ body {
 
     color: #ffffff;
 
-    font-size: 34px;
-
+    font-size: 20px;
     line-height: 1;
 
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
 .close-menu:hover {
@@ -475,54 +400,38 @@ body {
 
 
 /* =========================================
-   ПРОФІЛЬ У МЕНЮ
+   КНОПКА КАТАЛОГУ В МЕНЮ
    ========================================= */
 
 .profile-box {
+    padding: 10px;
+}
+
+.menus-button {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 10px;
+
     display: flex;
     align-items: center;
 
-    gap: 13px;
+    border-radius: 7px;
 
-    padding: 22px;
+    background: #2d9f57;
 
-    background: #f4eee7;
+    color: #ffffff;
 
-    border-bottom: 1px solid #e4ddd6;
-}
+    text-decoration: none;
 
-.profile-icon {
-    width: 50px;
-    height: 50px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-
-    background: #9b5c2e;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 25px;
-}
-
-.profile-info {
-    display: flex;
-    flex-direction: column;
-
-    gap: 4px;
-}
-
-.profile-info strong {
     font-size: 16px;
+    font-weight: 550;
+
+    transition: 0.25s;
 }
 
-.profile-info span {
-    color: #777;
-
-    font-size: 12px;
+.menus-button:hover {
+    background: #27c460;
 }
 
 
@@ -531,6 +440,11 @@ body {
    ========================================= */
 
 .side-navigation {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
     padding: 10px 0;
 
     overflow-y: auto;
@@ -544,16 +458,17 @@ body {
 
     padding: 15px 23px;
 
+    background: #ffffff;
+
+    border-radius: 8px;
+
     color: #302820;
 
     text-decoration: none;
 
     font-size: 16px;
 
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        padding 0.2s ease;
+    transition: 0.2s;
 }
 
 .side-link span:first-child {
@@ -586,42 +501,12 @@ body {
 
 
 /* =========================================
-   НИЖНЯ ЧАСТИНА МЕНЮ
-   ========================================= */
-
-.side-menu-bottom {
-    margin-top: auto;
-
-    padding: 15px 22px;
-
-    border-top: 1px solid #e2ddd8;
-}
-
-.bottom-link {
-    display: block;
-
-    padding: 10px 0;
-
-    color: #65615d;
-
-    text-decoration: none;
-
-    font-size: 14px;
-}
-
-.bottom-link:hover {
-    color: #9b5c2e;
-}
-
-
-/* =========================================
-   КАТАЛОГ — ОСНОВА
+   КАТАЛОГ
    ========================================= */
 
 .catalog-page {
     width: 100%;
-
-    min-height: calc(100vh - 74px);
+    min-height: calc(100vh - 65px);
 
     padding: 30px 0 80px;
 
@@ -633,7 +518,6 @@ body {
     max-width: 1400px;
 
     margin: 0 auto;
-
     padding: 0 40px;
 }
 
@@ -667,7 +551,7 @@ body {
 
 
 /* =========================================
-   ЗАГОЛОВОК
+   ЗАГОЛОВОК КАТАЛОГУ
    ========================================= */
 
 .catalog-title-row {
@@ -711,9 +595,7 @@ body {
 .catalog-layout {
     display: grid;
 
-    grid-template-columns:
-        260px
-        minmax(0, 1fr);
+    grid-template-columns: 260px minmax(0, 1fr);
 
     gap: 30px;
 
@@ -722,12 +604,11 @@ body {
 
 
 /* =========================================
-   БІЧНА ПАНЕЛЬ
+   БІЧНА ПАНЕЛЬ ФІЛЬТРІВ
    ========================================= */
 
 .catalog-sidebar {
     position: sticky;
-
     top: 95px;
 
     padding: 22px;
@@ -735,7 +616,6 @@ body {
     background: #ffffff;
 
     border: 1px solid #e5dfd9;
-
     border-radius: 12px;
 }
 
@@ -778,10 +658,7 @@ body {
 .category-link {
     display: grid;
 
-    grid-template-columns:
-        24px
-        1fr
-        auto;
+    grid-template-columns: 24px 1fr auto;
 
     align-items: center;
 
@@ -832,10 +709,7 @@ body {
 .price-inputs {
     display: grid;
 
-    grid-template-columns:
-        1fr
-        auto
-        1fr;
+    grid-template-columns: 1fr auto 1fr;
 
     align-items: center;
 
@@ -846,13 +720,11 @@ body {
 
 .price-inputs input {
     width: 100%;
-
     height: 38px;
 
     padding: 0 9px;
 
     border: 1px solid #dcd5cf;
-
     border-radius: 6px;
 
     outline: none;
@@ -872,11 +744,9 @@ body {
 
 .filter-button {
     width: 100%;
-
     height: 40px;
 
     border: none;
-
     border-radius: 6px;
 
     background: #a96736;
@@ -897,7 +767,7 @@ body {
 
 
 /* =========================================
-   РЕЙТИНГ
+   РЕЙТИНГ ФІЛЬТРА
    ========================================= */
 
 .rating-option {
@@ -958,7 +828,6 @@ body {
     padding: 0 12px;
 
     border: 1px solid #dcd5cf;
-
     border-radius: 7px;
 
     outline: none;
@@ -984,8 +853,7 @@ body {
 .catalog-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 20px;
 }
@@ -1012,8 +880,7 @@ body {
 .catalog-product-card:hover {
     transform: translateY(-4px);
 
-    box-shadow:
-        0 12px 28px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -1043,14 +910,13 @@ body {
     transition: transform 0.4s ease;
 }
 
-.catalog-product-card:hover
-.catalog-product-image img {
+.catalog-product-card:hover .catalog-product-image img {
     transform: scale(1.05);
 }
 
 
 /* =========================================
-   БЕЙДЖ
+   БЕЙДЖ ТОВАРУ
    ========================================= */
 
 .product-badge {
@@ -1098,7 +964,6 @@ body {
     height: 37px;
 
     border: 1px solid #e4ded8;
-
     border-radius: 50%;
 
     background: rgba(255, 255, 255, 0.94);
@@ -1106,7 +971,6 @@ body {
     color: #6f6862;
 
     font-size: 22px;
-
     line-height: 1;
 
     cursor: pointer;
@@ -1118,9 +982,9 @@ body {
 }
 
 .favorite-button:hover {
-    color: #d85d49;
-
     background: #ffffff;
+
+    color: #d85d49;
 
     transform: scale(1.08);
 }
@@ -1158,7 +1022,7 @@ body {
 
 
 /* =========================================
-   РЕЙТИНГ
+   РЕЙТИНГ ТОВАРУ
    ========================================= */
 
 .product-rating {
@@ -1170,11 +1034,11 @@ body {
 }
 
 .product-rating span {
+    margin-left: 4px;
+
     color: #8d8680;
 
     letter-spacing: 0;
-
-    margin-left: 4px;
 }
 
 
@@ -1194,7 +1058,6 @@ body {
     color: #251e19;
 
     font-size: 21px;
-
     font-weight: 800;
 }
 
@@ -1205,7 +1068,6 @@ body {
     flex-shrink: 0;
 
     border: none;
-
     border-radius: 8px;
 
     background: #a96736;
@@ -1253,7 +1115,6 @@ body {
     padding: 0 10px;
 
     border: 1px solid #ddd6cf;
-
     border-radius: 6px;
 
     background: #ffffff;
@@ -1292,15 +1153,15 @@ body {
 .footer {
     width: 100%;
 
-    background: #211f1e;
-
+    background: #5a2106;
+    border-top: 5px solid #120600; 
     color: #ffffff;
 }
 
 .footer-container {
     width: 100%;
-    max-width: 1400px;
-
+    max-width: 1500px;
+    height: 290px;
     margin: 0 auto;
 
     padding: 70px 50px;
@@ -1319,7 +1180,6 @@ body {
 .footer-column {
     display: flex;
     flex-direction: column;
-
     align-items: flex-start;
 
     gap: 13px;
@@ -1331,6 +1191,7 @@ body {
     color: #ffffff;
 
     font-size: 17px;
+    font-weight: 700;
 }
 
 .footer-column > a:not(.footer-logo) {
@@ -1348,7 +1209,9 @@ body {
 }
 
 
-/* Footer logo */
+/* =========================================
+   ЛОГОТИП FOOTER
+   ========================================= */
 
 .footer-logo {
     display: flex;
@@ -1402,7 +1265,9 @@ body {
 }
 
 
-/* Соцмережі */
+/* =========================================
+   СОЦМЕРЕЖІ
+   ========================================= */
 
 .footer-socials {
     display: flex;
@@ -1421,7 +1286,6 @@ body {
     justify-content: center;
 
     border: 1px solid #454240;
-
     border-radius: 8px;
 
     color: #ffffff;
@@ -1429,20 +1293,26 @@ body {
     text-decoration: none;
 
     font-size: 16px;
+    font-weight: 700;
 
     transition:
         background 0.2s ease,
-        border-color 0.2s ease;
+        border-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .footer-socials a:hover {
     background: #a96736;
 
     border-color: #a96736;
+
+    color: #ffffff;
 }
 
 
-/* Контакти */
+/* =========================================
+   КОНТАКТИ
+   ========================================= */
 
 .footer-contacts {
     gap: 16px;
@@ -1450,9 +1320,7 @@ body {
 
 .contact-item {
     display: flex !important;
-
     flex-direction: row !important;
-
     align-items: center;
 
     gap: 10px;
@@ -1462,6 +1330,8 @@ body {
     text-decoration: none;
 
     font-size: 14px;
+
+    transition: color 0.2s ease;
 }
 
 .contact-item:hover {
@@ -1474,7 +1344,47 @@ body {
     color: #a96736;
 
     text-align: center;
+
+    font-size: 16px;
 }
+
+
+/* =========================================
+   КНОПКА КОНТАКТІВ
+   ========================================= */
+
+.footer-contact-button {
+    display: inline-flex;
+
+    margin-top: 5px;
+
+    padding: 11px 16px;
+
+    border: 1px solid #5e5853;
+    border-radius: 6px;
+
+    color: #ffffff !important;
+
+    text-decoration: none;
+
+    font-size: 13px !important;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.footer-contact-button:hover {
+    background: #a96736;
+
+    border-color: #a96736;
+}
+
+
+/* =========================================
+   НИЖНЯ ЧАСТИНА FOOTER
+   ========================================= */
 
 .footer-bottom {
     border-top: 1px solid #3a3836;
@@ -1482,7 +1392,7 @@ body {
 
 .footer-bottom-container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
 
     min-height: 65px;
 
@@ -1515,6 +1425,8 @@ body {
     text-decoration: none;
 
     font-size: 12px;
+
+    transition: color 0.2s ease;
 }
 
 .footer-bottom-links a:hover {
@@ -1523,37 +1435,45 @@ body {
 
 
 /* =========================================
-   ПЛАНШЕТ
+   АДАПТАЦІЯ — ПЛАНШЕТ
    ========================================= */
 
-@media (max-width: 1150px) {
+@media (max-width: 1100px) {
 
-    .catalog-layout {
-        grid-template-columns:
-            220px
-            minmax(0, 1fr);
+    .logo {
+        width: auto;
+        min-width: 180px;
     }
 
-    .catalog-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+    .logo-image {
+        width: 46px;
+        height: 46px;
     }
 
-    .account-text {
-        display: none;
-    }
-
-    .account {
-        min-width: auto;
+    .logo-name {
+        font-size: 21px;
     }
 
     .catalog-button {
         display: none;
     }
 
+    .catalog-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .catalog-container {
+        padding: 0 30px;
+    }
+
     .footer-container {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 45px;
 
         padding: 60px 30px;
     }
@@ -1565,7 +1485,7 @@ body {
 
 
 /* =========================================
-   ТЕЛЕФОН
+   АДАПТАЦІЯ — ТЕЛЕФОН
    ========================================= */
 
 @media (max-width: 750px) {
@@ -1591,8 +1511,12 @@ body {
         font-size: 19px;
     }
 
-    .logo-subtitle {
-        display: none;
+    .search {
+        max-width: none;
+    }
+
+    .search-button {
+        width: 55px;
     }
 
     .catalog-page {
@@ -1655,7 +1579,12 @@ body {
 
 @media (max-width: 550px) {
 
-    .logo-text {
+    .menu-button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo-name {
         display: none;
     }
 
@@ -1668,18 +1597,14 @@ body {
         height: 42px;
     }
 
+    .search input {
+        padding: 0 12px;
+
+        font-size: 14px;
+    }
+
     .account {
         display: none;
-    }
-
-    .search input {
-        font-size: 14px;
-
-        padding: 0 12px;
-    }
-
-    .search-button {
-        width: 55px;
     }
 
     .catalog-product-image {
