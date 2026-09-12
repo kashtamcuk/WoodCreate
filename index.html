@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -11,19 +12,16 @@
 </head>
 
 <body>
-
-    <!-- =========================
+    <!-- =========================================
          ВЕРХНЯ ПАНЕЛЬ
-         ========================= -->
-
+         ========================================= -->
     <header class="top-header">
-
         <div class="header-container">
-
-            <!-- Кнопка меню -->
+            
             <button
                 class="menu-button"
                 id="menuButton"
+                type="button"
                 aria-label="Відкрити меню"
             >
                 <span></span>
@@ -31,46 +29,24 @@
                 <span></span>
             </button>
 
-
-            <!-- ЛОГОТИП -->
             <a href="index.html" class="logo">
-
                 <img
                     src="image/logo.png"
-                    alt="Логотип"
+                    alt="Логотип WoodCraft"
                     class="logo-image"
                 >
 
                 <div class="logo-text">
-
-                    <span class="logo-name">
-                        WOODCRAFT
-                    </span>
-
-                  
-
+                    <span class="logo-name">WOODCRAFT</span>
                 </div>
-
             </a>
 
-
-            <!-- Каталог -->
             <a href="catalog.html" class="catalog-button">
-
-                <span class="catalog-icon">
-                    ▦
-                </span>
-
-                <span>
-                    Каталог
-                </span>
-
+                <span class="catalog-icon">▦</span>
+                <span>Каталог</span>
             </a>
 
-
-            <!-- Пошук -->
             <div class="search">
-
                 <input
                     type="text"
                     id="searchInput"
@@ -84,135 +60,85 @@
                 >
                     Знайти
                 </button>
-
             </div>
 
-
-            
-
-
-            <!-- Кошик -->
-            <a href="#" class="cart">
-
-                <span class="cart-icon">
-                    🛒
-                </span>
-
-                
+            <a href="#" class="cart" aria-label="Кошик">
+                <span class="cart-icon">🛒</span>
             </a>
 
         </div>
-
     </header>
 
 
-    <!-- =========================
+    <!-- =========================================
          БОКОВЕ МЕНЮ
-         ========================= -->
+         ========================================= -->
 
-    <div
-        class="menu-overlay"
-        id="menuOverlay"
-    ></div>
+    <div class="menu-overlay" id="menuOverlay"></div>
 
-
-    <aside
-        class="side-menu"
-        id="sideMenu"
-    >
+    <aside class="side-menu" id="sideMenu">
 
         <div class="side-menu-header">
+            <img
+                src="image/logo.png"
+                alt="Логотип WoodCraft"
+                class="logo-image"
+            >
 
-            <img 
-                    src="image/logo.png"
-                    alt="Логотип"
-                    class="logo-image"
-                >
-
-            <div class="side-menu-title">
-                
-                WOODCRAFT
-            </div>
+            <div class="side-menu-title">WOODCRAFT</div>
 
             <button
                 class="close-menu"
                 id="closeMenu"
+                type="button"
+                aria-label="Закрити меню"
             >
                 ×
             </button>
-
         </div>
 
-
-        <!-- Профіль -->
         <div class="profile-box">
-
-             <a href="catalog.html" class="menus-button">
-
-                
-
-                <span>
-                   ▦    Каталог товарів
-                </span>
-
+            <a href="catalog.html" class="menus-button">
+                <span>▦ Каталог товарів</span>
             </a>
-
         </div>
 
-       
-
-
-        <!-- Навігація -->
         <nav class="side-navigation">
-
-            <a
-                href="index.html"
-                class="side-link active"
-            >
+            <a href="index.html" class="side-link active">
                 <span>🏠</span>
                 <span>Головна</span>
             </a>
 
-            <a
-                href="catalog.html"
-                class="side-link"
-            >
+            <a href="catalog.html" class="side-link">
                 <span>🛍️</span>
                 <span>Каталог</span>
             </a>
 
-            
-
-            <a
-                href="about.html"
-                class="side-link"
-            >
+            <a href="about.html" class="side-link">
                 <span>ℹ️</span>
                 <span>Про нас</span>
             </a>
 
-            <a
-                href="contact.html"
-                class="side-link"
-            >
+            <a href="contact.html" class="side-link">
                 <span>📞</span>
                 <span>Контакти</span>
             </a>
-
         </nav>
 
-        
     </aside>
 
 
-    <!-- =========================
-         ГОЛОВНИЙ ЕКРАН
-         ========================= -->
+    <!-- =========================================
+         ОСНОВНИЙ ВМІСТ
+         ========================================= -->
 
     <main>
 
-        <section class="hero">
+        <!-- =========================================
+             ГОЛОВНИЙ БАНЕР
+             ========================================= -->
 
+        <section class="hero">
             <div class="hero-content">
 
                 <span class="hero-label">
@@ -226,20 +152,15 @@
                 </h1>
 
                 <p>
-                    Якісні дерев'яні вироби
-                    для дому, подарунків
-                    та затишку.
+                    Якісні дерев'яні вироби для дому,
+                    подарунків та затишку.
                 </p>
 
-                <a
-                    href="catalog.html"
-                    class="hero-button"
-                >
+                <a href="catalog.html" class="hero-button">
                     Переглянути каталог
                 </a>
 
             </div>
-
         </section>
 
 
@@ -248,24 +169,17 @@
              ========================================= -->
 
         <section class="categories">
-
             <div class="categories-container">
 
                 <div class="section-heading">
+                    <span class="section-label">НАШ АСОРТИМЕНТ</span>
 
-                    <span class="section-label">
-                        НАШ АСОРТИМЕНТ
-                    </span>
-
-                    <h2>
-                        Категорії товарів
-                    </h2>
+                    <h2>Категорії товарів</h2>
 
                     <p>
-                        Оберіть категорію та знайдіть
-                        те, що вам потрібно.
+                        Оберіть категорію та знайдіть те,
+                        що вам потрібно.
                     </p>
-
                 </div>
 
                 <div class="categories-grid">
@@ -325,9 +239,7 @@
                     </a>
 
                 </div>
-
             </div>
-
         </section>
 
 
@@ -336,19 +248,13 @@
              ========================================= -->
 
         <section class="popular-products">
-
             <div class="products-container">
 
                 <div class="products-heading">
 
                     <div>
-                        <span class="section-label">
-                            ВИБІР ПОКУПЦІВ
-                        </span>
-
-                        <h2>
-                            Популярні товари
-                        </h2>
+                        <span class="section-label">ВИБІР ПОКУПЦІВ</span>
+                        <h2>Популярні товари</h2>
                     </div>
 
                     <a href="catalog.html" class="all-products-link">
@@ -357,16 +263,14 @@
 
                 </div>
 
-
                 <div class="products-grid">
 
-                    <article class="product-card">
+                    <!-- Товар 1 -->
 
+                    <article class="product-card">
                         <div class="product-image-box">
 
-                            <span class="product-badge">
-                                Хіт
-                            </span>
+                            <span class="product-badge">Хіт</span>
 
                             <button
                                 class="favorite-button"
@@ -386,8 +290,7 @@
                         <div class="product-info">
 
                             <div class="product-rating">
-                                ★★★★★
-                                <span>(24)</span>
+                                ★★★★★ <span>(24)</span>
                             </div>
 
                             <h3 class="product-title">
@@ -407,23 +310,22 @@
                                 <button
                                     class="add-cart-button"
                                     type="button"
+                                    aria-label="Додати в кошик"
                                 >
                                     🛒
                                 </button>
 
                             </div>
-
                         </div>
-
                     </article>
 
-                    <article class="product-card">
 
+                    <!-- Товар 2 -->
+
+                    <article class="product-card">
                         <div class="product-image-box">
 
-                            <span class="product-badge new">
-                                Новинка
-                            </span>
+                            <span class="product-badge new">Новинка</span>
 
                             <button
                                 class="favorite-button"
@@ -443,8 +345,7 @@
                         <div class="product-info">
 
                             <div class="product-rating">
-                                ★★★★★
-                                <span>(18)</span>
+                                ★★★★★ <span>(18)</span>
                             </div>
 
                             <h3 class="product-title">
@@ -464,18 +365,19 @@
                                 <button
                                     class="add-cart-button"
                                     type="button"
+                                    aria-label="Додати в кошик"
                                 >
                                     🛒
                                 </button>
 
                             </div>
-
                         </div>
-
                     </article>
 
-                    <article class="product-card">
 
+                    <!-- Товар 3 -->
+
+                    <article class="product-card">
                         <div class="product-image-box">
 
                             <button
@@ -496,8 +398,7 @@
                         <div class="product-info">
 
                             <div class="product-rating">
-                                ★★★★★
-                                <span>(31)</span>
+                                ★★★★★ <span>(31)</span>
                             </div>
 
                             <h3 class="product-title">
@@ -517,23 +418,22 @@
                                 <button
                                     class="add-cart-button"
                                     type="button"
+                                    aria-label="Додати в кошик"
                                 >
                                     🛒
                                 </button>
 
                             </div>
-
                         </div>
-
                     </article>
 
-                    <article class="product-card">
 
+                    <!-- Товар 4 -->
+
+                    <article class="product-card">
                         <div class="product-image-box">
 
-                            <span class="product-badge sale">
-                                -15%
-                            </span>
+                            <span class="product-badge sale">-15%</span>
 
                             <button
                                 class="favorite-button"
@@ -553,8 +453,7 @@
                         <div class="product-info">
 
                             <div class="product-rating">
-                                ★★★★★
-                                <span>(42)</span>
+                                ★★★★★ <span>(42)</span>
                             </div>
 
                             <h3 class="product-title">
@@ -562,7 +461,8 @@
                             </h3>
 
                             <p class="product-description">
-                                Набір дерев'яних виробів для чудового подарунка.
+                                Набір дерев'яних виробів
+                                для чудового подарунка.
                             </p>
 
                             <div class="product-bottom">
@@ -571,26 +471,24 @@
                                     <span class="old-price">
                                         1 199 грн
                                     </span>
+
                                     999 грн
                                 </div>
 
                                 <button
                                     class="add-cart-button"
                                     type="button"
+                                    aria-label="Додати в кошик"
                                 >
                                     🛒
                                 </button>
 
                             </div>
-
                         </div>
-
                     </article>
 
                 </div>
-
             </div>
-
         </section>
 
 
@@ -599,98 +497,61 @@
              ========================================= -->
 
         <section class="advantages">
-
             <div class="advantages-container">
 
                 <div class="advantage-item">
-
-                    <div class="advantage-icon">
-                        ✓
-                    </div>
+                    <div class="advantage-icon">✓</div>
 
                     <div class="advantage-content">
-
-                        <h3>
-                            Якість
-                        </h3>
+                        <h3>Якість</h3>
 
                         <p>
-                            Ретельно підбираємо матеріали
-                            та контролюємо якість кожного виробу.
+                            Ретельно підбираємо матеріали та контролюємо
+                            якість кожного виробу.
                         </p>
-
                     </div>
-
                 </div>
 
-
                 <div class="advantage-item">
-
-                    <div class="advantage-icon">
-                        ✋
-                    </div>
+                    <div class="advantage-icon">✋</div>
 
                     <div class="advantage-content">
-
-                        <h3>
-                            Ручна робота
-                        </h3>
+                        <h3>Ручна робота</h3>
 
                         <p>
-                            Багато наших виробів створюються
-                            вручну з увагою до кожної деталі.
+                            Багато наших виробів створюються вручну
+                            з увагою до кожної деталі.
                         </p>
-
                     </div>
-
                 </div>
 
-
                 <div class="advantage-item">
-
-                    <div class="advantage-icon">
-                        🚚
-                    </div>
+                    <div class="advantage-icon">🚚</div>
 
                     <div class="advantage-content">
-
-                        <h3>
-                            Швидка доставка
-                        </h3>
+                        <h3>Швидка доставка</h3>
 
                         <p>
                             Відправляємо замовлення по Україні
                             зручним для вас способом.
                         </p>
-
                     </div>
-
                 </div>
 
-
                 <div class="advantage-item">
-
-                    <div class="advantage-icon">
-                        ★
-                    </div>
+                    <div class="advantage-icon">★</div>
 
                     <div class="advantage-content">
-
-                        <h3>
-                            Гарантія
-                        </h3>
+                        <h3>Гарантія</h3>
 
                         <p>
                             Піклуємося про якість замовлення
                             та підтримуємо наших покупців.
                         </p>
-
                     </div>
-
                 </div>
 
             </div>
-
         </section>
 
 
@@ -699,7 +560,6 @@
              ========================================= -->
 
         <section class="about-preview">
-
             <div class="about-container">
 
                 <div class="about-image">
@@ -710,25 +570,15 @@
                     >
 
                     <div class="about-image-badge">
-
-                        <strong>
-                            100%
-                        </strong>
-
-                        <span>
-                            уваги до деталей
-                        </span>
-
+                        <strong>100%</strong>
+                        <span>уваги до деталей</span>
                     </div>
 
                 </div>
 
-
                 <div class="about-content">
 
-                    <span class="section-label">
-                        ПРО НАС
-                    </span>
+                    <span class="section-label">ПРО НАС</span>
 
                     <h2>
                         Створюємо речі,
@@ -743,239 +593,167 @@
                     </p>
 
                     <p class="about-secondary-text">
-                        Для нас важливо не просто виготовити
-                        товар, а зробити річ, яка буде приносити
-                        користь і задоволення протягом багатьох років.
+                        Для нас важливо не просто виготовити товар,
+                        а зробити річ, яка буде приносити користь
+                        і задоволення протягом багатьох років.
                     </p>
 
                     <div class="about-points">
 
                         <div class="about-point">
-
-                            <span class="about-point-icon">
-                                ✓
-                            </span>
-
-                            <span>
-                                Якісні матеріали
-                            </span>
-
+                            <span class="about-point-icon">✓</span>
+                            <span>Якісні матеріали</span>
                         </div>
 
                         <div class="about-point">
-
-                            <span class="about-point-icon">
-                                ✓
-                            </span>
-
-                            <span>
-                                Увага до кожної деталі
-                            </span>
-
+                            <span class="about-point-icon">✓</span>
+                            <span>Увага до кожної деталі</span>
                         </div>
 
                         <div class="about-point">
-
-                            <span class="about-point-icon">
-                                ✓
-                            </span>
-
-                            <span>
-                                Надійна упаковка
-                            </span>
-
+                            <span class="about-point-icon">✓</span>
+                            <span>Надійна упаковка</span>
                         </div>
 
                     </div>
 
-                    <a
-                        href="about.html"
-                        class="about-button"
-                    >
+                    <a href="about.html" class="about-button">
                         Дізнатися більше
                         <span>→</span>
                     </a>
 
                 </div>
-
             </div>
-
         </section>
-
-
-        <!-- =========================================
-             FOOTER
-             ========================================= -->
-
-        <footer class="footer">
-
-            <div class="footer-container">
-
-                <div class="footer-column footer-brand">
-
-                    <a href="index.html" class="footer-logo">
-
-                        <img
-                            src="image/logo.png"
-                            alt="Логотип"
-                        >
-
-                        <div class="footer-logo-text">
-
-                            <strong>
-                                WOODCRAFT
-                            </strong>
-
-                            <span>
-                                магазин виробів
-                            </span>
-
-                        </div>
-
-                    </a>
-
-                    <p class="footer-description">
-                        Якісні товари, гарний дизайн
-                        та увага до кожного замовлення.
-                    </p>
-
-                    <div class="footer-socials">
-
-                        <a href="#" aria-label="Instagram">
-                            ◎
-                        </a>
-
-                        <a href="#" aria-label="Telegram">
-                            ✈
-                        </a>
-
-                        <a href="#" aria-label="Facebook">
-                            f
-                        </a>
-
-                        <a href="#" aria-label="YouTube">
-                            ▶
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="footer-column">
-
-                    <h3>
-                        Магазин
-                    </h3>
-
-                    <a href="index.html">
-                        Головна
-                    </a>
-
-                    <a href="catalog.html">
-                        Каталог
-                    </a>
-
-                    <a href="#">
-                        Популярні товари
-                    </a>
-
-                    <a href="#">
-                        Новинки
-                    </a>
-
-                    <a href="#">
-                        Обране
-                    </a>
-
-                </div>
-
-                <div class="footer-column">
-
-                    <h3>
-                        Покупцям
-                    </h3>
-
-                    <a href="about.html">
-                        Про нас
-                    </a>
-
-                    <a href="#">
-                        Гарантія
-                    </a>
-
-                </div>
-
-                <div class="footer-column footer-contacts">
-
-                    <h3>
-                        Контакти
-                    </h3>
-
-                    <a href="tel:+380000000000" class="contact-item">
-                        <span class="contact-icon">
-                            ☎
-                        </span>
-                        <span>
-                            +380 XX XXX XX XX
-                        </span>
-                    </a>
-
-                    <a href="mailto:info@example.com" class="contact-item">
-                        <span class="contact-icon">
-                            ✉
-                        </span>
-                        <span>
-                            info@example.com
-                        </span>
-                    </a>
-
-                    <div class="contact-item">
-                        <span class="contact-icon">
-                            ●
-                        </span>
-                        <span>
-                            Україна
-                        </span>
-                    </div>
-
-                    <a href="contact.html" class="footer-contact-button">
-                        Усі контакти →
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-
-                <div class="footer-bottom-container">
-
-                    <span>
-                        © 2026 WoodCraft. Усі права захищені.
-                    </span>
-
-                    <div class="footer-bottom-links">
-
-                        <a href="#">
-                            Політика конфіденційності
-                        </a>
-
-                        <a href="#">
-                            Умови використання
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </footer>
 
     </main>
 
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Бренд -->
+
+            <div class="footer-column footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    <img
+                        src="image/logo.png"
+                        alt="Логотип WoodCraft"
+                    >
+
+                    <div class="footer-logo-text">
+                        <strong>WOODCRAFT</strong>
+                        <span>магазин виробів</span>
+                    </div>
+
+                </a>
+
+                <p class="footer-description">
+                    Якісні товари, гарний дизайн
+                    та увага до кожного замовлення.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="Telegram">✈</a>
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Магазин -->
+
+            <div class="footer-column">
+
+                <h3>Магазин</h3>
+
+                <a href="index.html">Головна</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="#">Популярні товари</a>
+                <a href="#">Новинки</a>
+                <a href="#">Обране</a>
+
+            </div>
+
+
+            <!-- Покупцям -->
+
+            <div class="footer-column">
+
+                <h3>Покупцям</h3>
+
+                <a href="about.html">Про нас</a>
+                <a href="#">Гарантія</a>
+
+            </div>
+
+
+            <!-- Контакти -->
+
+            <div class="footer-column footer-contacts">
+
+                <h3>Контакти</h3>
+
+                <a href="tel:+380000000000" class="contact-item">
+                    <span class="contact-icon">☎</span>
+                    <span>+380 XX XXX XX XX</span>
+                </a>
+
+                <a href="mailto:info@example.com" class="contact-item">
+                    <span class="contact-icon">✉</span>
+                    <span>info@example.com</span>
+                </a>
+
+                <div class="contact-item">
+                    <span class="contact-icon">●</span>
+                    <span>Україна</span>
+                </div>
+
+                <a href="contact.html" class="footer-contact-button">
+                    Усі контакти →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Нижня частина -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-bottom-container">
+
+                <span>
+                    © 2026 WoodCraft. Усі права захищені.
+                </span>
+
+                <div class="footer-bottom-links">
+                    <a href="#">Політика конфіденційності</a>
+                    <a href="#">Умови використання</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
     <script src="js/script.js"></script>
-    
 
 </body>
 

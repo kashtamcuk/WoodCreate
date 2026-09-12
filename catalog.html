@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -14,17 +15,17 @@
 
 
     <!-- =========================================
-         ВЕРХНЯ ПАНЕЛЬ
+         ВЕРХНЯ ПАНЕЛЬ — ІДЕНТИЧНА INDEX.HTML
          ========================================= -->
 
     <header class="top-header">
 
         <div class="header-container">
 
-            <!-- Кнопка меню -->
             <button
                 class="menu-button"
                 id="menuButton"
+                type="button"
                 aria-label="Відкрити меню"
             >
                 <span></span>
@@ -33,54 +34,36 @@
             </button>
 
 
-            <!-- Логотип -->
             <a href="index.html" class="logo">
 
                 <img
                     src="image/logo.png"
-                    alt="Логотип"
+                    alt="Логотип WoodCraft"
                     class="logo-image"
                 >
 
                 <div class="logo-text">
-
-                    <span class="logo-name">
-                        WOODCRAFT
-                    </span>
-
-                    <span class="logo-subtitle">
-                        дерев'яні вироби
-                    </span>
-
+                    <span class="logo-name">WOODCRAFT</span>
                 </div>
 
             </a>
 
 
-            <!-- Кнопка каталогу -->
-            <a
-                href="catalog.html"
-                class="catalog-button catalog-active"
-            >
+            <a href="catalog.html" class="catalog-button">
 
-                <span class="catalog-icon">
-                    ▦
-                </span>
+                <span class="catalog-icon">▦</span>
 
-                <span>
-                    Каталог
-                </span>
+                <span>Каталог</span>
 
             </a>
 
 
-            <!-- Пошук -->
             <div class="search">
 
                 <input
                     type="text"
                     id="searchInput"
-                    placeholder="Я шукаю..."
+                    placeholder="🔍 Я шукаю..."
                 >
 
                 <button
@@ -88,46 +71,18 @@
                     id="searchButton"
                     type="button"
                 >
-                    🔍
+                    Знайти
                 </button>
 
             </div>
 
 
-            <!-- Акаунт -->
-            <a href="#" class="account">
-
-                <span class="account-icon">
-                    👤
-                </span>
-
-                <span class="account-text">
-
-                    <small>
-                        Вхід
-                    </small>
-
-                    Реєстрація
-
-                </span>
-
-            </a>
-
-
-            <!-- Кошик -->
-            <a href="#" class="cart">
-
-                <span class="cart-icon">
-                    🛒
-                </span>
-
-                <span
-                    class="cart-counter"
-                    id="cartCounter"
-                >
-                    0
-                </span>
-
+            <a
+                href="#"
+                class="cart"
+                aria-label="Кошик"
+            >
+                <span class="cart-icon">🛒</span>
             </a>
 
         </div>
@@ -136,7 +91,7 @@
 
 
     <!-- =========================================
-         БОКОВЕ МЕНЮ
+         БОКОВЕ МЕНЮ — ІДЕНТИЧНЕ INDEX.HTML
          ========================================= -->
 
     <div
@@ -152,13 +107,21 @@
 
         <div class="side-menu-header">
 
+            <img
+                src="image/logo.png"
+                alt="Логотип WoodCraft"
+                class="logo-image"
+            >
+
             <div class="side-menu-title">
-                Меню
+                WOODCRAFT
             </div>
 
             <button
                 class="close-menu"
                 id="closeMenu"
+                type="button"
+                aria-label="Закрити меню"
             >
                 ×
             </button>
@@ -168,21 +131,12 @@
 
         <div class="profile-box">
 
-            <div class="profile-icon">
-                👤
-            </div>
-
-            <div class="profile-info">
-
-                <strong>
-                    Мій профіль
-                </strong>
-
-                <span>
-                    Увійдіть або зареєструйтесь
-                </span>
-
-            </div>
+            <a
+                href="catalog.html"
+                class="menus-button"
+            >
+                <span>▦ Каталог товарів</span>
+            </a>
 
         </div>
 
@@ -197,6 +151,7 @@
                 <span>Головна</span>
             </a>
 
+
             <a
                 href="catalog.html"
                 class="side-link active"
@@ -205,13 +160,6 @@
                 <span>Каталог</span>
             </a>
 
-            <a
-                href="#"
-                class="side-link"
-            >
-                <span>❤️</span>
-                <span>Обране</span>
-            </a>
 
             <a
                 href="about.html"
@@ -220,6 +168,7 @@
                 <span>ℹ️</span>
                 <span>Про нас</span>
             </a>
+
 
             <a
                 href="contact.html"
@@ -230,18 +179,6 @@
             </a>
 
         </nav>
-
-
-        <div class="side-menu-bottom">
-
-            <a
-                href="#"
-                class="bottom-link"
-            >
-                ⚙️ Налаштування
-            </a>
-
-        </div>
 
     </aside>
 
@@ -256,15 +193,14 @@
 
 
             <!-- Хлібні крихти -->
+
             <div class="breadcrumbs">
 
                 <a href="index.html">
                     Головна
                 </a>
 
-                <span>
-                    /
-                </span>
+                <span>/</span>
 
                 <span>
                     Каталог
@@ -274,6 +210,7 @@
 
 
             <!-- Заголовок -->
+
             <div class="catalog-title-row">
 
                 <div>
@@ -297,6 +234,7 @@
 
 
             <!-- Основна область -->
+
             <div class="catalog-layout">
 
 
@@ -315,82 +253,89 @@
 
                         <nav class="category-menu">
 
-    <a
-        href="#"
-        class="category-link active"
-        data-category="all"
-    >
-        <span>▦</span>
-        Усі товари
-        <span class="category-count">24</span>
-    </a>
+                            <a
+                                href="#"
+                                class="category-link active"
+                                data-category="all"
+                            >
+                                <span>▦</span>
+                                Усі товари
+                                <span class="category-count">24</span>
+                            </a>
 
-    <a
-        href="#"
-        class="category-link"
-        data-category="home"
-    >
-        <span>🏠</span>
-        Для дому
-        <span class="category-count">8</span>
-    </a>
 
-    <a
-        href="#"
-        class="category-link"
-        data-category="kitchen"
-    >
-        <span>🍽️</span>
-        Для кухні
-        <span class="category-count">6</span>
-    </a>
+                            <a
+                                href="#"
+                                class="category-link"
+                                data-category="home"
+                            >
+                                <span>🏠</span>
+                                Для дому
+                                <span class="category-count">8</span>
+                            </a>
 
-    <a
-        href="#"
-        class="category-link"
-        data-category="decor"
-    >
-        <span>✨</span>
-        Декор
-        <span class="category-count">4</span>
-    </a>
 
-    <a
-        href="#"
-        class="category-link"
-        data-category="furniture"
-    >
-        <span>🪑</span>
-        Меблі
-        <span class="category-count">3</span>
-    </a>
+                            <a
+                                href="#"
+                                class="category-link"
+                                data-category="kitchen"
+                            >
+                                <span>🍽️</span>
+                                Для кухні
+                                <span class="category-count">6</span>
+                            </a>
 
-    <a
-        href="#"
-        class="category-link"
-        data-category="gifts"
-    >
-        <span>🎁</span>
-        Подарунки
-        <span class="category-count">2</span>
-    </a>
 
-    <a
-        href="#"
-        class="category-link"
-        data-category="other"
-    >
-        <span>📦</span>
-        Інше
-        <span class="category-count">1</span>
-    </a>
+                            <a
+                                href="#"
+                                class="category-link"
+                                data-category="decor"
+                            >
+                                <span>✨</span>
+                                Декор
+                                <span class="category-count">4</span>
+                            </a>
 
-</nav>
+
+                            <a
+                                href="#"
+                                class="category-link"
+                                data-category="furniture"
+                            >
+                                <span>🪑</span>
+                                Меблі
+                                <span class="category-count">3</span>
+                            </a>
+
+
+                            <a
+                                href="#"
+                                class="category-link"
+                                data-category="gifts"
+                            >
+                                <span>🎁</span>
+                                Подарунки
+                                <span class="category-count">2</span>
+                            </a>
+
+
+                            <a
+                                href="#"
+                                class="category-link"
+                                data-category="other"
+                            >
+                                <span>📦</span>
+                                Інше
+                                <span class="category-count">1</span>
+                            </a>
+
+                        </nav>
 
                     </div>
 
 
                     <!-- Ціна -->
+
                     <div class="sidebar-block">
 
                         <h3>
@@ -405,9 +350,7 @@
                                 min="0"
                             >
 
-                            <span>
-                                —
-                            </span>
+                            <span>—</span>
 
                             <input
                                 type="number"
@@ -416,6 +359,7 @@
                             >
 
                         </div>
+
 
                         <button
                             class="filter-button"
@@ -428,11 +372,13 @@
 
 
                     <!-- Рейтинг -->
+
                     <div class="sidebar-block">
 
                         <h3>
                             Рейтинг
                         </h3>
+
 
                         <label class="rating-option">
 
@@ -476,7 +422,9 @@
 
                 <section class="catalog-products">
 
+
                     <!-- Панель сортування -->
+
                     <div class="products-toolbar">
 
                         <span class="products-count">
@@ -510,416 +458,429 @@
                     </div>
 
 
-                    <!-- Сітка -->
+                    <!-- =================================
+                         СІТКА ТОВАРІВ
+                         ================================= -->
+
                     <div class="catalog-grid">
 
 
-                        <!-- Товар -->
                         <!-- Товар 1 -->
-<article
-    class="catalog-product-card"
-    data-name="Дерев'яна обробна дошка"
-    data-category="kitchen"
-    data-price="499"
-    data-rating="5"
-    data-popular="24"
-    data-new="0"
->
-
-    <div class="catalog-product-image">
-
-        <span class="product-badge">
-            Хіт
-        </span>
-
-        <button
-            class="favorite-button"
-            type="button"
-            aria-label="Додати в обране"
-        >
-            ♡
-        </button>
-
-        <img
-            src="image/Дерев'яна_обробна_дошка.jpg"
-            alt="Дерев'яна обробна дошка"
-        >
-
-    </div>
-
-    <div class="catalog-product-info">
-
-        <div class="product-rating">
-            ★★★★★
-            <span>(24)</span>
-        </div>
-
-        <h2>
-            Дерев'яна обробна дошка
-        </h2>
-
-        <p>
-            Натуральний матеріал,
-            якісна ручна обробка.
-        </p>
-
-        <div class="catalog-product-bottom">
-
-            <strong>
-                499 грн
-            </strong>
-
-            <button
-                class="add-cart-button"
-                type="button"
-            >
-                🛒
-            </button>
-
-        </div>
-
-    </div>
-
-</article>
-
-
-<!-- Товар 2 -->
-<article
-    class="catalog-product-card"
-    data-name="Дерев'яна миска"
-    data-category="kitchen"
-    data-price="649"
-    data-rating="5"
-    data-popular="18"
-    data-new="1"
->
-
-    <div class="catalog-product-image">
-
-        <span class="product-badge new">
-            Новинка
-        </span>
-
-        <button
-            class="favorite-button"
-            type="button"
-            aria-label="Додати в обране"
-        >
-            ♡
-        </button>
-
-        <img
-            src="image/Дерев'яна_миска.jpg"
-            alt="Дерев'яна миска"
-        >
-
-    </div>
-
-    <div class="catalog-product-info">
 
-        <div class="product-rating">
-            ★★★★★
-            <span>(18)</span>
-        </div>
+                        <article
+                            class="catalog-product-card"
+                            data-name="Дерев'яна обробна дошка"
+                            data-category="kitchen"
+                            data-price="499"
+                            data-rating="5"
+                            data-popular="24"
+                            data-new="0"
+                        >
 
-        <h2>
-            Дерев'яна миска
-        </h2>
-
-        <p>
-            Натуральна миска
-            для щоденного використання.
-        </p>
+                            <div class="catalog-product-image">
 
-        <div class="catalog-product-bottom">
+                                <span class="product-badge">
+                                    Хіт
+                                </span>
 
-            <strong>
-                649 грн
-            </strong>
+                                <button
+                                    class="favorite-button"
+                                    type="button"
+                                    aria-label="Додати в обране"
+                                >
+                                    ♡
+                                </button>
 
-            <button
-                class="add-cart-button"
-                type="button"
-            >
-                🛒
-            </button>
-
-        </div>
-
-    </div>
+                                <img
+                                    src="image/Дерев'яна_обробна_дошка.jpg"
+                                    alt="Дерев'яна обробна дошка"
+                                >
 
-</article>
+                            </div>
 
 
-<!-- Товар 3 -->
-<article
-    class="catalog-product-card"
-    data-name="Дерев'яний органайзер"
-    data-category="home"
-    data-price="799"
-    data-rating="5"
-    data-popular="31"
-    data-new="0"
->
-
-    <div class="catalog-product-image">
+                            <div class="catalog-product-info">
 
-        <button
-            class="favorite-button"
-            type="button"
-            aria-label="Додати в обране"
-        >
-            ♡
-        </button>
+                                <div class="product-rating">
+                                    ★★★★★
+                                    <span>(24)</span>
+                                </div>
 
-        <img
-            src="image/Дерев'яний_органайзер.jpg"
-            alt="Дерев'яний органайзер"
-        >
+                                <h2>
+                                    Дерев'яна обробна дошка
+                                </h2>
 
-    </div>
+                                <p>
+                                    Натуральний матеріал,
+                                    якісна ручна обробка.
+                                </p>
 
-    <div class="catalog-product-info">
+                                <div class="catalog-product-bottom">
 
-        <div class="product-rating">
-            ★★★★★
-            <span>(31)</span>
-        </div>
+                                    <strong>
+                                        499 грн
+                                    </strong>
 
-        <h2>
-            Дерев'яний органайзер
-        </h2>
+                                    <button
+                                        class="add-cart-button"
+                                        type="button"
+                                    >
+                                        🛒
+                                    </button>
 
-        <p>
-            Для робочого столу
-            та зручного зберігання.
-        </p>
+                                </div>
 
-        <div class="catalog-product-bottom">
+                            </div>
 
-            <strong>
-                799 грн
-            </strong>
+                        </article>
 
-            <button
-                class="add-cart-button"
-                type="button"
-            >
-                🛒
-            </button>
-
-        </div>
-
-    </div>
 
-</article>
+                        <!-- Товар 2 -->
 
+                        <article
+                            class="catalog-product-card"
+                            data-name="Дерев'яна миска"
+                            data-category="kitchen"
+                            data-price="649"
+                            data-rating="5"
+                            data-popular="18"
+                            data-new="1"
+                        >
 
-<!-- Товар 4 -->
-<article
-    class="catalog-product-card"
-    data-name="Подарунковий набір"
-    data-category="gifts"
-    data-price="999"
-    data-rating="5"
-    data-popular="42"
-    data-new="0"
->
-
-    <div class="catalog-product-image">
+                            <div class="catalog-product-image">
 
-        <span class="product-badge sale">
-            -15%
-        </span>
+                                <span class="product-badge new">
+                                    Новинка
+                                </span>
 
-        <button
-            class="favorite-button"
-            type="button"
-            aria-label="Додати в обране"
-        >
-            ♡
-        </button>
-
-        <img
-            src="image/Подарунковий_набір.jpg"
-            alt="Подарунковий набір"
-        >
+                                <button
+                                    class="favorite-button"
+                                    type="button"
+                                    aria-label="Додати в обране"
+                                >
+                                    ♡
+                                </button>
 
-    </div>
+                                <img
+                                    src="image/Дерев'яна_миска.jpg"
+                                    alt="Дерев'яна миска"
+                                >
 
-    <div class="catalog-product-info">
+                            </div>
 
-        <div class="product-rating">
-            ★★★★★
-            <span>(42)</span>
-        </div>
 
-        <h2>
-            Подарунковий набір
-        </h2>
-
-        <p>
-            Набір виробів
-            для особливого подарунка.
-        </p>
+                            <div class="catalog-product-info">
 
-        <div class="catalog-product-bottom">
+                                <div class="product-rating">
+                                    ★★★★★
+                                    <span>(18)</span>
+                                </div>
 
-            <strong>
-                999 грн
-            </strong>
+                                <h2>
+                                    Дерев'яна миска
+                                </h2>
 
-            <button
-                class="add-cart-button"
-                type="button"
-            >
-                🛒
-            </button>
-
-        </div>
-
-    </div>
+                                <p>
+                                    Натуральна миска
+                                    для щоденного використання.
+                                </p>
 
-</article>
+                                <div class="catalog-product-bottom">
 
+                                    <strong>
+                                        649 грн
+                                    </strong>
 
-<!-- Товар 5 -->
-<article
-    class="catalog-product-card"
-    data-name="Настінна полиця"
-    data-category="furniture"
-    data-price="899"
-    data-rating="4"
-    data-popular="11"
-    data-new="0"
->
-
-    <div class="catalog-product-image">
+                                    <button
+                                        class="add-cart-button"
+                                        type="button"
+                                    >
+                                        🛒
+                                    </button>
 
-        <button
-            class="favorite-button"
-            type="button"
-            aria-label="Додати в обране"
-        >
-            ♡
-        </button>
+                                </div>
 
-        <img
-            src="image/Настінна_полиця.jpg"
-            alt="Настінна полиця"
-        >
+                            </div>
 
-    </div>
+                        </article>
 
-    <div class="catalog-product-info">
 
-        <div class="product-rating">
-            ★★★★☆
-            <span>(11)</span>
-        </div>
+                        <!-- Товар 3 -->
 
-        <h2>
-            Настінна полиця
-        </h2>
+                        <article
+                            class="catalog-product-card"
+                            data-name="Дерев'яний органайзер"
+                            data-category="home"
+                            data-price="799"
+                            data-rating="5"
+                            data-popular="31"
+                            data-new="0"
+                        >
 
-        <p>
-            Стильна полиця
-            для дому.
-        </p>
+                            <div class="catalog-product-image">
 
-        <div class="catalog-product-bottom">
+                                <button
+                                    class="favorite-button"
+                                    type="button"
+                                    aria-label="Додати в обране"
+                                >
+                                    ♡
+                                </button>
 
-            <strong>
-                899 грн
-            </strong>
+                                <img
+                                    src="image/Дерев'яний_органайзер.jpg"
+                                    alt="Дерев'яний органайзер"
+                                >
 
-            <button
-                class="add-cart-button"
-                type="button"
-            >
-                🛒
-            </button>
+                            </div>
 
-        </div>
 
-    </div>
+                            <div class="catalog-product-info">
 
-</article>
+                                <div class="product-rating">
+                                    ★★★★★
+                                    <span>(31)</span>
+                                </div>
 
+                                <h2>
+                                    Дерев'яний органайзер
+                                </h2>
 
-<!-- Товар 6 -->
-<article
-    class="catalog-product-card"
-    data-name="Дерев'яний піднос"
-    data-category="home"
-    data-price="729"
-    data-rating="5"
-    data-popular="29"
-    data-new="1"
->
+                                <p>
+                                    Для робочого столу
+                                    та зручного зберігання.
+                                </p>
 
-    <div class="catalog-product-image">
+                                <div class="catalog-product-bottom">
 
-        <span class="product-badge">
-            Хіт
-        </span>
+                                    <strong>
+                                        799 грн
+                                    </strong>
 
-        <button
-            class="favorite-button"
-            type="button"
-            aria-label="Додати в обране"
-        >
-            ♡
-        </button>
+                                    <button
+                                        class="add-cart-button"
+                                        type="button"
+                                    >
+                                        🛒
+                                    </button>
 
-        <img
-            src="image/Дерев'яний_піднос.jpg"
-            alt="Дерев'яний піднос"
-        >
+                                </div>
 
-    </div>
+                            </div>
 
-    <div class="catalog-product-info">
+                        </article>
 
-        <div class="product-rating">
-            ★★★★★
-            <span>(29)</span>
-        </div>
 
-        <h2>
-            Дерев'яний піднос
-        </h2>
+                        <!-- Товар 4 -->
 
-        <p>
-            Для сервірування
-            та затишних вечорів.
-        </p>
+                        <article
+                            class="catalog-product-card"
+                            data-name="Подарунковий набір"
+                            data-category="gifts"
+                            data-price="999"
+                            data-rating="5"
+                            data-popular="42"
+                            data-new="0"
+                        >
 
-        <div class="catalog-product-bottom">
+                            <div class="catalog-product-image">
 
-            <strong>
-                729 грн
-            </strong>
+                                <span class="product-badge sale">
+                                    -15%
+                                </span>
 
-            <button
-                class="add-cart-button"
-                type="button"
-            >
-                🛒
-            </button>
+                                <button
+                                    class="favorite-button"
+                                    type="button"
+                                    aria-label="Додати в обране"
+                                >
+                                    ♡
+                                </button>
 
-        </div>
+                                <img
+                                    src="image/Подарунковий_набір.jpg"
+                                    alt="Подарунковий набір"
+                                >
 
-    </div>
+                            </div>
 
-</article>
 
+                            <div class="catalog-product-info">
 
+                                <div class="product-rating">
+                                    ★★★★★
+                                    <span>(42)</span>
+                                </div>
+
+                                <h2>
+                                    Подарунковий набір
+                                </h2>
+
+                                <p>
+                                    Набір виробів
+                                    для особливого подарунка.
+                                </p>
+
+                                <div class="catalog-product-bottom">
+
+                                    <strong>
+                                        999 грн
+                                    </strong>
+
+                                    <button
+                                        class="add-cart-button"
+                                        type="button"
+                                    >
+                                        🛒
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Товар 5 -->
+
+                        <article
+                            class="catalog-product-card"
+                            data-name="Настінна полиця"
+                            data-category="furniture"
+                            data-price="899"
+                            data-rating="4"
+                            data-popular="11"
+                            data-new="0"
+                        >
+
+                            <div class="catalog-product-image">
+
+                                <button
+                                    class="favorite-button"
+                                    type="button"
+                                    aria-label="Додати в обране"
+                                >
+                                    ♡
+                                </button>
+
+                                <img
+                                    src="image/Настінна_полиця.jpg"
+                                    alt="Настінна полиця"
+                                >
+
+                            </div>
+
+
+                            <div class="catalog-product-info">
+
+                                <div class="product-rating">
+                                    ★★★★☆
+                                    <span>(11)</span>
+                                </div>
+
+                                <h2>
+                                    Настінна полиця
+                                </h2>
+
+                                <p>
+                                    Стильна полиця
+                                    для дому.
+                                </p>
+
+                                <div class="catalog-product-bottom">
+
+                                    <strong>
+                                        899 грн
+                                    </strong>
+
+                                    <button
+                                        class="add-cart-button"
+                                        type="button"
+                                    >
+                                        🛒
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Товар 6 -->
+
+                        <article
+                            class="catalog-product-card"
+                            data-name="Дерев'яний піднос"
+                            data-category="home"
+                            data-price="729"
+                            data-rating="5"
+                            data-popular="29"
+                            data-new="1"
+                        >
+
+                            <div class="catalog-product-image">
+
+                                <span class="product-badge">
+                                    Хіт
+                                </span>
+
+                                <button
+                                    class="favorite-button"
+                                    type="button"
+                                    aria-label="Додати в обране"
+                                >
+                                    ♡
+                                </button>
+
+                                <img
+                                    src="image/Дерев'яний_піднос.jpg"
+                                    alt="Дерев'яний піднос"
+                                >
+
+                            </div>
+
+
+                            <div class="catalog-product-info">
+
+                                <div class="product-rating">
+                                    ★★★★★
+                                    <span>(29)</span>
+                                </div>
+
+                                <h2>
+                                    Дерев'яний піднос
+                                </h2>
+
+                                <p>
+                                    Для сервірування
+                                    та затишних вечорів.
+                                </p>
+
+                                <div class="catalog-product-bottom">
+
+                                    <strong>
+                                        729 грн
+                                    </strong>
+
+                                    <button
+                                        class="add-cart-button"
+                                        type="button"
+                                    >
+                                        🛒
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
 
                     </div>
 
 
                     <!-- Пагінація -->
+
                     <div class="catalog-pagination">
 
                         <button class="pagination-button active">
@@ -950,12 +911,15 @@
 
 
     <!-- =========================================
-         FOOTER
+         FOOTER — ІДЕНТИЧНИЙ INDEX.HTML
          ========================================= -->
 
     <footer class="footer">
 
         <div class="footer-container">
+
+
+            <!-- Бренд -->
 
             <div class="footer-column footer-brand">
 
@@ -966,7 +930,7 @@
 
                     <img
                         src="image/logo.png"
-                        alt="Логотип"
+                        alt="Логотип WoodCraft"
                     >
 
                     <div class="footer-logo-text">
@@ -983,22 +947,49 @@
 
                 </a>
 
+
                 <p class="footer-description">
                     Якісні товари, гарний дизайн
                     та увага до кожного замовлення.
                 </p>
 
+
                 <div class="footer-socials">
 
-                    <a href="#">◎</a>
-                    <a href="#">✈</a>
-                    <a href="#">f</a>
-                    <a href="#">▶</a>
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        ◎
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Telegram"
+                    >
+                        ✈
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                    >
+                        f
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+                    >
+                        ▶
+                    </a>
 
                 </div>
 
             </div>
 
+
+            <!-- Магазин -->
 
             <div class="footer-column">
 
@@ -1022,8 +1013,14 @@
                     Новинки
                 </a>
 
+                <a href="#">
+                    Обране
+                </a>
+
             </div>
 
+
+            <!-- Покупцям -->
 
             <div class="footer-column">
 
@@ -1042,37 +1039,73 @@
             </div>
 
 
+            <!-- Контакти -->
+
             <div class="footer-column footer-contacts">
 
                 <h3>
                     Контакти
                 </h3>
 
+
                 <a
                     href="tel:+380000000000"
                     class="contact-item"
                 >
-                    <span class="contact-icon">☎</span>
-                    <span>+380 XX XXX XX XX</span>
+
+                    <span class="contact-icon">
+                        ☎
+                    </span>
+
+                    <span>
+                        +380 XX XXX XX XX
+                    </span>
+
                 </a>
+
 
                 <a
                     href="mailto:info@example.com"
                     class="contact-item"
                 >
-                    <span class="contact-icon">✉</span>
-                    <span>info@example.com</span>
+
+                    <span class="contact-icon">
+                        ✉
+                    </span>
+
+                    <span>
+                        info@example.com
+                    </span>
+
                 </a>
 
+
                 <div class="contact-item">
-                    <span class="contact-icon">●</span>
-                    <span>Україна</span>
+
+                    <span class="contact-icon">
+                        ●
+                    </span>
+
+                    <span>
+                        Україна
+                    </span>
+
                 </div>
+
+
+                <a
+                    href="contact.html"
+                    class="footer-contact-button"
+                >
+                    Усі контакти →
+                </a>
 
             </div>
 
         </div>
 
+
+        <!-- Нижня частина -->
 
         <div class="footer-bottom">
 
@@ -1081,6 +1114,7 @@
                 <span>
                     © 2026 WoodCraft. Усі права захищені.
                 </span>
+
 
                 <div class="footer-bottom-links">
 
@@ -1101,8 +1135,12 @@
     </footer>
 
 
+    <!-- JavaScript -->
+
     <script src="js/catalog.js"></script>
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
+
