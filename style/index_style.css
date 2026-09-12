@@ -153,8 +153,7 @@ body {
 /* =========================================
    ПОШУК
    ========================================= */
-
-.search {
+   .search {
     flex: 1;
 
     width: 100%;
@@ -169,25 +168,54 @@ body {
     overflow: hidden;
 }
 
+/* Поле з лупою та текстом */
+.search-input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 14px;
+}
+
+/* PNG іконка лупи */
+.search-icon {
+    width: 20px;
+    height: 20px;
+
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    margin: 0 8px 0 0;
+}
+
+/* Поле вводу */
 .search input {
     flex: 1;
     min-width: 0;
+    height: 100%;
 
     border: none;
     outline: none;
 
-    padding: 0 18px;
+    padding: 0 8px 0 0;
 
     color: #2c211a;
     font-size: 16px;
+    background: transparent;
 }
 
 .search input::placeholder {
     color: #929292;
 }
 
+/* Кнопка "Знайти" */
 .search-button {
     width: 83px;
+    height: 100%;
 
     border: none;
     border-radius: 8px;
@@ -206,8 +234,6 @@ body {
 .search-button:hover {
     background: #27c460;
 }
-
-
 /* =========================================
    КОШИК
    ========================================= */
@@ -374,12 +400,19 @@ body {
     font-weight: 550;
 
     transition: 0.25s;
+    justify-content: center;
+    
 }
 
 .menus-button:hover {
     background: #27c460;
 }
-
+.menus-button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
 
 /* =========================================
    НАВІГАЦІЯ БОКОВОГО МЕНЮ
@@ -618,7 +651,7 @@ body {
 .category-card {
     position: relative;
 
-    height: 300px;
+    height: 250px;
 
     overflow: hidden;
 
@@ -983,8 +1016,7 @@ body {
     border: none;
     border-radius: 8px;
 
-    background: #a96736;
-    color: #ffffff;
+   
 
     font-size: 19px;
 
@@ -996,15 +1028,26 @@ body {
 }
 
 .add-cart-button:hover {
-    background: #c07943;
+    background: #f5ece6;
 
-    transform: translateY(-2px);
+
 }
 
 .add-cart-button:active {
     transform: translateY(0);
 }
 
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.cart-icons{
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
 
 /* =========================================
    ПЕРЕВАГИ

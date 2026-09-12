@@ -194,69 +194,86 @@ background: rgba(204, 202, 202, 0.3);
 ========================================= */
 
 .search {
-flex: 1;
+    flex: 1;
 
+    width: 100%;
+    max-width: 800px;
+    height: 43px;
 
-width: 100%;
-max-width: 800px;
-height: 43px;
+    display: flex;
 
-display: flex;
+    background: #ffffff;
+    border-radius: 8px;
 
-background: #ffffff;
-
-border-radius: 8px;
-
-overflow: hidden;
-
-
+    overflow: hidden;
 }
 
+/* Поле з лупою та текстом */
+.search-input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 14px;
+}
+
+/* PNG іконка лупи */
+.search-icon {
+    width: 20px;
+    height: 20px;
+
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    margin: 0 8px 0 0;
+}
+
+/* Поле вводу */
 .search input {
-flex: 1;
+    flex: 1;
+    min-width: 0;
+    height: 100%;
 
+    border: none;
+    outline: none;
 
-min-width: 0;
+    padding: 0 8px 0 0;
 
-border: none;
-outline: none;
-
-padding: 0 18px;
-
-color: #2c211a;
-
-font-size: 16px;
-
-
+    color: #2c211a;
+    font-size: 16px;
+    background: transparent;
 }
 
 .search input::placeholder {
-color: #929292;
+    color: #929292;
 }
 
+/* Кнопка "Знайти" */
 .search-button {
-width: 83px;
+    width: 83px;
+    height: 100%;
 
-border: none;
-border-radius: 8px;
+    border: none;
+    border-radius: 8px;
 
-background: #2d9f57;
-color: #ffffff;
+    background: #2d9f57;
+    color: #ffffff;
 
-font-size: 16px;
-font-weight: bold;
+    font-size: 16px;
+    font-weight: bold;
 
-cursor: pointer;
+    cursor: pointer;
 
-transition: 0.2s;
-
-
+    transition: 0.2s;
 }
 
 .search-button:hover {
-background: #27c460;
+    background: #27c460;
 }
-
 /* =========================================
 КОШИК
 ========================================= */
@@ -289,6 +306,17 @@ transition: 0.2s;
 background: #5a3d20;
 }
 
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.cart-icons{
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
 /* =========================================
 БОКОВЕ МЕНЮ
 ========================================= */
@@ -417,36 +445,41 @@ color: #d99a59;
 ========================================= */
 
 .profile-box {
-padding: 10px;
+    padding: 10px;
 }
 
 .menus-button {
-width: 100%;
-height: 42px;
+    width: 100%;
+    height: 42px;
 
+    padding: 0 10px;
 
-padding: 0 10px;
+    display: flex;
+    align-items: center;
 
-display: flex;
-align-items: center;
+    border-radius: 7px;
 
-border-radius: 7px;
+    background: #2d9f57;
+    color: #ffffff;
 
-background: #2d9f57;
-color: #ffffff;
+    text-decoration: none;
 
-text-decoration: none;
+    font-size: 16px;
+    font-weight: 550;
 
-font-size: 16px;
-font-weight: 550;
-
-transition: 0.25s;
-
-
+    transition: 0.25s;
+    justify-content: center;
+    
 }
 
 .menus-button:hover {
-background: #27c460;
+    background: #27c460;
+}
+.menus-button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 /* =========================================

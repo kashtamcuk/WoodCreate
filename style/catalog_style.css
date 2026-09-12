@@ -195,7 +195,7 @@ body {
    ПОШУК
    ========================================= */
 
-.search {
+   .search {
     flex: 1;
 
     width: 100%;
@@ -205,41 +205,64 @@ body {
     display: flex;
 
     background: #ffffff;
-
     border-radius: 8px;
 
     overflow: hidden;
 }
 
+/* Поле з лупою та текстом */
+.search-input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 14px;
+}
+
+/* PNG іконка лупи */
+.search-icon {
+    width: 20px;
+    height: 20px;
+
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    margin: 0 8px 0 0;
+}
+
+/* Поле вводу */
 .search input {
     flex: 1;
-
     min-width: 0;
-
-    padding: 0 18px;
+    height: 100%;
 
     border: none;
     outline: none;
 
-    color: #2c211a;
+    padding: 0 8px 0 0;
 
+    color: #2c211a;
     font-size: 16px;
+    background: transparent;
 }
 
 .search input::placeholder {
     color: #929292;
 }
 
+/* Кнопка "Знайти" */
 .search-button {
     width: 83px;
-
-    flex-shrink: 0;
+    height: 100%;
 
     border: none;
     border-radius: 8px;
 
     background: #2d9f57;
-
     color: #ffffff;
 
     font-size: 16px;
@@ -253,7 +276,6 @@ body {
 .search-button:hover {
     background: #27c460;
 }
-
 
 /* =========================================
    КОШИК
@@ -286,7 +308,16 @@ body {
     background: #5a3d20;
 }
 
-
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.cart-icons{
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
 /* =========================================
    БОКОВЕ МЕНЮ
    ========================================= */
@@ -403,7 +434,7 @@ body {
    КНОПКА КАТАЛОГУ В МЕНЮ
    ========================================= */
 
-.profile-box {
+   .profile-box {
     padding: 10px;
 }
 
@@ -419,7 +450,6 @@ body {
     border-radius: 7px;
 
     background: #2d9f57;
-
     color: #ffffff;
 
     text-decoration: none;
@@ -428,10 +458,18 @@ body {
     font-weight: 550;
 
     transition: 0.25s;
+    justify-content: center;
+    
 }
 
 .menus-button:hover {
     background: #27c460;
+}
+.menus-button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 
@@ -1070,9 +1108,7 @@ body {
     border: none;
     border-radius: 8px;
 
-    background: #a96736;
-
-    color: #ffffff;
+   
 
     font-size: 19px;
 
@@ -1084,9 +1120,9 @@ body {
 }
 
 .add-cart-button:hover {
-    background: #c07943;
+    background: #f5ece6;
 
-    transform: translateY(-2px);
+
 }
 
 .add-cart-button:active {
