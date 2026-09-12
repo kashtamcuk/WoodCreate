@@ -12,13 +12,13 @@
 
 <body>
 
-    <header class="top-header">
-
+<header class="top-header">
         <div class="header-container">
-
+            
             <button
                 class="menu-button"
                 id="menuButton"
+                type="button"
                 aria-label="Відкрити меню"
             >
                 <span></span>
@@ -27,46 +27,82 @@
             </button>
 
             <a href="index.html" class="logo">
-                <img src="image/logo.png" alt="Логотип" class="logo-image">
+                <img
+                    src="image/logo.png"
+                    alt="Логотип WoodCraft"
+                    class="logo-image"
+                >
 
                 <div class="logo-text">
                     <span class="logo-name">WOODCRAFT</span>
-                    
                 </div>
             </a>
 
             <a href="catalog.html" class="catalog-button">
-                <span class="catalog-icon">▦</span>
-                
+                <span class="catalog-icon"><img src="image/category.png" alt="Кошик" class="cart-icons"></span>
                 <span>Каталог</span>
             </a>
 
             <div class="search">
-                <input type="text" id="searchInput" placeholder="Я шукаю...">
-                <button class="search-button" id="searchButton" type="button">🔍</button>
+                <div class="search-input">
+                    <img src="image/loupe.png" alt="Пошук" class="search-icon">
+            
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Я шукаю..."
+                    >
+                </div>
+            
+                <button
+                    class="search-button"
+                    id="searchButton"
+                    type="button"
+                >
+                    Знайти
+                </button>
             </div>
 
-            
-
-            <a href="#" class="cart">
-                <span class="cart-icon">🛒</span>
-                <span class="cart-counter" id="cartCounter">0</span>
+            <a href="#" class="cart" aria-label="Кошик">
+                <span class="cart-icon"><span class="cart-icon"><img src="image/koshuk.png" alt="Кошик" class="cart-icons"></span></span>
             </a>
 
         </div>
-
     </header>
+
+
+    <!-- =========================================
+         БОКОВЕ МЕНЮ
+         ========================================= -->
 
     <div class="menu-overlay" id="menuOverlay"></div>
 
     <aside class="side-menu" id="sideMenu">
 
         <div class="side-menu-header">
-            <div class="side-menu-title">Меню</div>
-            <button class="close-menu" id="closeMenu">×</button>
+            <img
+                src="image/logo.png"
+                alt="Логотип WoodCraft"
+                class="logo-image"
+            >
+
+            <div class="side-menu-title">WOODCRAFT</div>
+
+            <button
+                class="close-menu"
+                id="closeMenu"
+                type="button"
+                aria-label="Закрити меню"
+            >
+                ×
+            </button>
         </div>
 
-        
+        <div class="profile-box">
+            <a href="catalog.html" class="menus-button">
+                <span><img src="image/category.png" alt="Кошик" class="cart-icons"> Каталог товарів</span>
+            </a>
+        </div>
 
         <nav class="side-navigation">
             <a href="index.html" class="side-link">
@@ -77,11 +113,6 @@
             <a href="catalog.html" class="side-link">
                 <span>🛍️</span>
                 <span>Каталог</span>
-            </a>
-
-            <a href="#" class="side-link">
-                <span>❤️</span>
-                <span>Обране</span>
             </a>
 
             <a href="about.html" class="side-link active">
@@ -95,12 +126,14 @@
             </a>
         </nav>
 
-        <div class="side-menu-bottom">
-            <a href="#" class="bottom-link">⚙️ Налаштування</a>
-        </div>
-
     </aside>
 
+
+    <!-- =========================================
+         ОСНОВНИЙ ВМІСТ
+         ========================================= -->
+
+    
     <main class="about-page">
 
         <div class="page-container">
@@ -146,6 +179,7 @@
             <section class="story-section">
                 <div class="story-image">
                     <div class="story-image-inner">
+                        <img src="image/drevusuna.png" alt="Майстерня WoodCraft" class="story-workshop-image">
                         <span>Натуральність</span>
                     </div>
                 </div>
@@ -241,54 +275,82 @@
 
         <div class="footer-container">
 
+            <!-- Бренд -->
+
             <div class="footer-column footer-brand">
 
                 <a href="index.html" class="footer-logo">
-                    <img src="image/logo.png" alt="Логотип">
+
+                    <img
+                        src="image/logo.png"
+                        alt="Логотип WoodCraft"
+                    >
+
                     <div class="footer-logo-text">
                         <strong>WOODCRAFT</strong>
                         <span>магазин виробів</span>
                     </div>
+
                 </a>
 
                 <p class="footer-description">
-                    Якісні товари, гарний дизайн та увага до кожного замовлення.
+                    Якісні товари, гарний дизайн
+                    та увага до кожного замовлення.
                 </p>
 
                 <div class="footer-socials">
-                    <a href="#">◎</a>
-                    <a href="#">✈</a>
-                    <a href="#">f</a>
-                    <a href="#">▶</a>
+
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="Telegram">✈</a>
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+
                 </div>
 
             </div>
 
+
+            <!-- Магазин -->
+
             <div class="footer-column">
+
                 <h3>Магазин</h3>
+
                 <a href="index.html">Головна</a>
                 <a href="catalog.html">Каталог</a>
                 <a href="#">Популярні товари</a>
                 <a href="#">Новинки</a>
+                <a href="#">Обране</a>
+
             </div>
+
+
+            <!-- Покупцям -->
 
             <div class="footer-column">
+
                 <h3>Покупцям</h3>
+
                 <a href="about.html">Про нас</a>
                 <a href="#">Гарантія</a>
+
             </div>
 
+
+            <!-- Контакти -->
+
             <div class="footer-column footer-contacts">
+
                 <h3>Контакти</h3>
 
-                <a href="tel:+380500123456" class="contact-item">
+                <a href="tel:+380000000000" class="contact-item">
                     <span class="contact-icon">☎</span>
-                    <span>+380 (50) 012-34-56</span>
+                    <span>+380 XX XXX XX XX</span>
                 </a>
 
-                <a href="mailto:info@woodcraft.shop" class="contact-item">
+                <a href="mailto:info@example.com" class="contact-item">
                     <span class="contact-icon">✉</span>
-                    <span>info@woodcraft.shop</span>
+                    <span>info@example.com</span>
                 </a>
 
                 <div class="contact-item">
@@ -296,19 +358,32 @@
                     <span>Україна</span>
                 </div>
 
-                <a href="contact.html" class="footer-contact-button">Усі контакти →</a>
+                <a href="contact.html" class="footer-contact-button">
+                    Усі контакти →
+                </a>
+
             </div>
 
         </div>
 
+
+        <!-- Нижня частина -->
+
         <div class="footer-bottom">
+
             <div class="footer-bottom-container">
-                <span>© 2026 WoodCraft. Усі права захищені.</span>
+
+                <span>
+                    © 2026 WoodCraft. Усі права захищені.
+                </span>
+
                 <div class="footer-bottom-links">
                     <a href="#">Політика конфіденційності</a>
                     <a href="#">Умови використання</a>
                 </div>
+
             </div>
+
         </div>
 
     </footer>
@@ -316,5 +391,4 @@
     <script src="js/script.js"></script>
 
 </body>
-
 </html>
