@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =========================================
-       ПРАВИЛЬНЕ ВІДОБРАЖЕННЯ "ТОВАР/ТОВАРИ"
+       ПРАВИЛЬНЕ ВІДОБРАЖЕННЯ "ТОВАРІВ"
        ========================================= */
 
     function getProductWord(number) {
@@ -588,49 +588,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
-    /* =========================================
-       ОБРАНЕ
-       ========================================= */
-
-    const favoriteButtons =
-        document.querySelectorAll(
-            ".favorite-button"
-        );
-
-
-    favoriteButtons.forEach(
-        (button) => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    button.classList.toggle(
-                        "favorite-active"
-                    );
-
-
-                    if (
-                        button.classList.contains(
-                            "favorite-active"
-                        )
-                    ) {
-
-                        button.textContent = "♥";
-
-                    }
-
-                    else {
-
-                        button.textContent = "♡";
-
-                    }
-
-                }
-            );
-
-        }
-    );
 
 
     /* =========================================

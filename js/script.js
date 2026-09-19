@@ -6,42 +6,6 @@ const themeToggle = document.getElementById("themeToggle");
 
 
 // =========================================
-// ТЕМА
-// =========================================
-
-function applyTheme(theme) {
-
-    const isDark = theme === "dark";
-
-    document.body.classList.toggle("dark-theme", isDark);
-
-    if (themeToggle) {
-        themeToggle.textContent = isDark
-            ? "☀️ Світла тема"
-            : "🌙 Чорна тема";
-    }
-
-    localStorage.setItem("woodcraft-theme", theme);
-}
-
-
-const savedTheme = localStorage.getItem("woodcraft-theme") || "light";
-applyTheme(savedTheme);
-
-if (themeToggle) {
-    themeToggle.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        const nextTheme = document.body.classList.contains("dark-theme")
-            ? "light"
-            : "dark";
-
-        applyTheme(nextTheme);
-    });
-}
-
-
-// =========================================
 // ВІДКРИТТЯ МЕНЮ
 // =========================================
 
@@ -52,7 +16,6 @@ menuButton.addEventListener("click", () => {
 
     document.body.style.overflow = "hidden";
 });
-
 
 // =========================================
 // ЗАКРИТТЯ МЕНЮ
@@ -75,9 +38,8 @@ closeMenu.addEventListener("click", closeSideMenu);
 menuOverlay.addEventListener("click", closeSideMenu);
 
 
-// =========================================
+
 // ПОШУК
-// =========================================
 
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
@@ -96,10 +58,8 @@ function performSearch() {
     window.location.href = `catalog.html?q=${encodeURIComponent(searchText)}`;
 }
 
-
 // Натискання кнопки пошуку
 searchButton.addEventListener("click", performSearch);
-
 
 // Натискання Enter у пошуку
 searchInput.addEventListener("keydown", (event) => {
